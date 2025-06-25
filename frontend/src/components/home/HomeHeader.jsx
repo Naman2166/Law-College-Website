@@ -20,10 +20,10 @@ const HomeHeader = () => {
         
 
         {/* Search Bar */}
-        <p className='bg-orange-600 text-white px-4 py-2'>Admission Open</p>
+        <p className='bg-orange-600 text-white px-4 py-2 rounded-md'>Admission Open</p>
   
         
-        <p className='text-3xl'>for <span className='font-bold'>B.A.LL.B</span> & <span className='font-bold'>B.A.LL.B</span>  </p>
+        <p className='text-3xl'>for <span className='font-bold'>B.A.LL.B</span> & <span className='font-bold'>LL.B</span>  </p>
         
 
       </div>
