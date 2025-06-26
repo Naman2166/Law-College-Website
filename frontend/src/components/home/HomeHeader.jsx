@@ -8,7 +8,7 @@ const HomeHeader = () => {
   return (
     <div
       className='flex flex-col md:flex-row flex-wrap bg-cover bg-center px-6 md:px-10 lg:px-20 min-h-auto lg:min-h-[671px]'
-      style={{ backgroundImage: `url(${assets.HomeHeaderBgImageCropped})` }} >
+      style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }} >
 
 
       {/* -------------- Left Side  -------------- */}
