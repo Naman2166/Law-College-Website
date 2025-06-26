@@ -1,30 +1,40 @@
 // src/components/SidebarMenu.jsx
-import React from 'react'
-import { Link } from 'react-router-dom' // Optional, if you're using routing
+import React from 'react';
 
-const SidebarMenu = () => {
-  const menuItems = [
-    { label: 'About the Institution', path: '/about/institution' },
-    { label: 'Vision and Mission', path: '/about/vision' },
-    { label: 'What makes SSK Law College Special', path: '/about/special' },
-    { label: 'Founder Message', path: '/about/founder' },
-    { label: "Principal's Message", path: '/about/principal' },
-    { label: 'Committees', path: '/about/committees' },
-  ]
-
+const SidebarMenu = ({ menuItems = [], sidebarWidth = 'w-[400px]', activeIndex, onMenuClick }) => {
   return (
-    <div className="bg-gray-100 shadow-md w-full max-w-md">
-      {menuItems.map((item, index) => (
-        <Link 
-          key={index} 
-          to={item.path} 
-          className="flex justify-end py-2 px-3 rounded hover:bg-white text-gray-800 font-medium pt-16px pl-32px"
-        >
-          {item.label}
-        </Link>
-      ))}
-    </div>
-  )
-}
+    <aside className={`bg-[#EBEBEB] ${sidebarWidth} min-h-screen`}>
+      <div className="max-w-md pt-6">
+        {menuItems.map((item, index) => {
+          const isActive = activeIndex === index;
 
-export default SidebarMenu
+          return (
+            <div
+              key={index}
+              onClick={() => onMenuClick(index)}
+              className={`cursor-pointer relative flex justify-end py-4 px-3 mt-3 font-medium group overflow-hidden
+                ${isActive ? 'text-[#1245A8]' : 'text-[#007BFF] hover:text-[#1245A8]'}
+              `}
+            >
+              <span
+                className={`absolute right-0 top-0 h-full transition-all duration-300
+                  ${isActive ? 'w-5/6 bg-white' : 'w-0 group-hover:w-5/6 bg-white'}
+                `}
+              ></span>
+
+              <span
+                className={`absolute right-0 top-0 h-full transition-all duration-300
+                  ${isActive ? 'w-[4px] bg-[#1245A8]' : 'w-0 group-hover:w-[4px] bg-[#1245A8]'}
+                `}
+              ></span>
+
+              <span className="relative z-10 pr-3">{item.label}</span>
+            </div>
+          );
+        })}
+      </div>
+    </aside>
+  );
+};
+
+export default SidebarMenu;
