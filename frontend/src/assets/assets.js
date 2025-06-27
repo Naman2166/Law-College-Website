@@ -1,18 +1,23 @@
-
-import university_logo from "./images/university_logo.png"
-import college_logo from "./images/college_logo.png"
-import HomeHeaderBgImage from './images/HomeHeaderBgImage.png'
-import HomeHeaderBgImageCropped from "./images/HomeHeaderBgImageCropped.jpg"
-import HomeHeaderImage from './images/HomeHeaderImage.png'
+import HeaderBgImage from './images/HomeHeaderBgImage.png'
 import NavbarImage from './images/NavbarImage.png'
 import about from "./images/about.png"
+import HomePageBgImage from "./images/HomePageBgImage.png"
+import HomePageImage from "./images/HomePageImage.png"
+import HomePageCoursesBgImage from "./images/HomePageCoursesBgImage.jpg"
+import HomePageCoursesImage from "./images/HomePageCoursesImage.png"
+import ssk from "./images/ssk.png"
+import sns from "./images/sns.png"
+
+
 
 export const assets = {
-  university_logo,
-  college_logo,
-  HomeHeaderBgImage,
-  HomeHeaderBgImageCropped,
-  HomeHeaderImage, 
+  HeaderBgImage,
   NavbarImage,
   about,
+  HomePageBgImage,
+  HomePageImage,
+  HomePageCoursesBgImage,
+  HomePageCoursesImage,
+  ssk,
+  sns,
 }

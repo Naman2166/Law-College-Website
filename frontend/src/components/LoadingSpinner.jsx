@@ -1,13 +1,13 @@
 // src/components/LoadingSpinner.jsx
 import React from 'react';
-import college_logo from '../assets/images/college_logo.png'
+import {assets} from '../assets/assets'
 
 const LoadingSpinner = () => {
  return (
     <div className="fixed inset-0 bg-white/60 backdrop-blur-sm flex flex-col items-center justify-center z-50">
       {/* Optional College Logo */}
       <img
-        src={college_logo}
+        src={assets.logo}
         alt="College Logo"
         className="w-20 h-20 mb-4 animate-pulse"
       />

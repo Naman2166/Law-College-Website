@@ -10,54 +10,53 @@ const Navbar = () => {
     return (
         <div className="w-full">
 
-            {/* Top Navbar */}
             <div className='xl:flex xl:flex-row bg-[#023820] text-sm'>
 
-                <div className='flex justify-between items-center h-16 sm:h-20 bg-white px-2 lg:px-4 py-3 pr-6 lg:pr-16'>
+                {/* ------------left part------------ */}
+                <div className='flex justify-between items-center h-16 sm:h-20 bg-white px-2 lg:px-3 py-1 pr-6 lg:pr-4'>
 
 
                     {/* Navbar Image */}
                     <div>
-                        <img src={assets.NavbarImage} className='h-16 w-auto' alt='Logo' />
+                        <img src={assets.NavbarImage} className='h-16 lg:h-[60px] xl:h-[75px] w-auto' alt='Logo' />
                     </div>
 
-                    
                     
                         {/* Hamburger icon for mobile */}
                         <div className="xl:hidden flex items-center mr-0 md:mr-2">
                             <FaBars onClick={() => setShowMenu(!showMenu)} className="text-3xl md:text-4xl text-[#1245A8] cursor-pointer" />
-                        </div>
-                    
+                        </div>   
 
                 </div>
 
 
-                {/* Desktop Menu */}
+
+                {/* --------------right part or  Desktop Menu---------------- */}
                 <div className='hidden xl:flex flex-row items-center gap-16 py-3 px-7 mx-auto bg-[#023820]'>
                     <ul className='text-white text-[16px] lg:text-[14px] xl:text-[16px] flex justify-between gap-5 xl:gap-13 font-bold'>
                         <NavLink to='/' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Home</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Home</li>
                         </NavLink>
                         <NavLink to='/about-us' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>About Us</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>About Us</li>
                         </NavLink>
                         <NavLink to='/admission' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Admission</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Admission</li>
                         </NavLink>
                         <NavLink to='/academics' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Academics</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Academics</li>
                         </NavLink>
                         <NavLink to='/library' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Library</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Library</li>
                         </NavLink>
                         <NavLink to='/student-corner' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Student Corner</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Student Corner</li>
                         </NavLink>
                         <NavLink to='/gallery' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Gallery</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Gallery</li>
                         </NavLink>
                         <NavLink to='/contact-us' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 hover:text-black font-bold whitespace-nowrap'>Contact Us</li>
+                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Contact Us</li>
                         </NavLink>
                     </ul>
                 </div>
