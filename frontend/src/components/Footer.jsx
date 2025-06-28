@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <div className='bg-[#212529] text-white' >
 
-      <div className='flex flex-rows md:flex-cols justify-evenly gap-24  mt-40 py-16 px-5 text-sm'>
+      <div className='flex flex-rows md:flex-cols justify-evenly gap-24 py-16 px-5 text-sm'>
 
         {/* ----------------- Left Section --------------- */}
         <div>

@@ -164,7 +164,7 @@ const AboutUs = () => {
       case 3:
         return (
           <div className="mt-10 px-4 space-y-6">
-            <h2 className="text-2xl md:text-3xl font-bold text-green-700 text-start">Secretary Desk</h2>
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Secretary Desk</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</h3>
             <div className="flex justify-center mt-4">
               <img src={ssk} alt="Mr. Santosh Khandage" className="w-64 h-auto rounded shadow-md" loading="lazy" />
