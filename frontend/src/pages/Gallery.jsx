@@ -2,7 +2,20 @@ import React from 'react'
 
 const Gallery = () => {
   return (
-    <div>Gallery</div>
+    <div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello</div>
+      <div>hello12</div>
+    </div>
   )
 }
 

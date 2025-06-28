@@ -1,81 +1,111 @@
-import { assets } from '../assets/assets'
-import { NavLink, useNavigate } from 'react-router-dom'
-import { FaBars } from "react-icons/fa";
+import { assets } from '../assets/assets';
+import { NavLink, useNavigate } from 'react-router-dom';
+import { FaBars } from 'react-icons/fa';
 import { useState } from 'react';
 
 const Navbar = () => {
-    const navigate = useNavigate();
-    const [showMenu, setShowMenu] = useState(false);  // Toggle menu on mobile
+  const navigate = useNavigate();
+  const [showMenu, setShowMenu] = useState(false);
 
-    return (
-        <div className="w-full">
+  const navLinks = [
+    { to: '/', label: 'Home' },
+    { to: '/about-us', label: 'About Us' },
+    { to: '/admission', label: 'Admission' },
+    { to: '/academics', label: 'Academics' },
+    { to: '/library', label: 'Library' },
+    { to: '/student-corner', label: 'Student Corner' },
+    { to: '/gallery', label: 'Gallery' },
+    { to: '/contact-us', label: 'Contact Us' },
+  ];
 
-            <div className='xl:flex xl:flex-row bg-[#023820] text-sm'>
+  return (
+    <div className="w-full fixed top-0 left-0 z-50 shadow-md bg-white">
+      <div className="lg:flex lg:flex-col text-sm bg-white">
+        
+        {/* Top Row */}
+        <div className="flex justify-between items-center h-16 sm:h-20 px-4 lg:px-4 py-2 bg-white">
+          {/* Logo */}
+          <div>
+            <img
+              src={assets.NavbarImage}
+              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto"
+              alt="Logo"
+            />
+          </div>
 
-                {/* ------------left part------------ */}
-                <div className='flex justify-between items-center h-16 sm:h-20 bg-white px-2 lg:px-3 py-1 pr-6 lg:pr-4'>
+          {/* Buttons */}
+          <div className="hidden lg:flex gap-4 items-center">
+            <button
+              onClick={() => navigate('/contact-us')}
+              className="bg-white text-[#0b0360] border-2 border-[#0b0360] px-6 py-2 rounded-md text-sm font-semibold hover:bg-[#0b0360] hover:text-white transition duration-300"
+            >
+              Enquire Now
+            </button>
+            <button
+              onClick={() => navigate('/contact-us')}
+              className="bg-[#0b0360] text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-[#060ca3] transition duration-300"
+            >
+              Apply Now
+            </button>
+          </div>
 
-
-                    {/* Navbar Image */}
-                    <div>
-                        <img src={assets.NavbarImage} className='h-16 lg:h-[60px] xl:h-[75px] w-auto' alt='Logo' />
-                    </div>
-
-                    
-                        {/* Hamburger icon for mobile */}
-                        <div className="xl:hidden flex items-center mr-0 md:mr-2">
-                            <FaBars onClick={() => setShowMenu(!showMenu)} className="text-3xl md:text-4xl text-[#1245A8] cursor-pointer" />
-                        </div>   
-
-                </div>
-
-
-
-                {/* --------------right part or  Desktop Menu---------------- */}
-                <div className='hidden xl:flex flex-row items-center gap-16 py-3 px-7 mx-auto bg-[#023820]'>
-                    <ul className='text-white text-[16px] lg:text-[14px] xl:text-[16px] flex justify-between gap-5 xl:gap-13 font-bold'>
-                        <NavLink to='/' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Home</li>
-                        </NavLink>
-                        <NavLink to='/about-us' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>About Us</li>
-                        </NavLink>
-                        <NavLink to='/admission' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Admission</li>
-                        </NavLink>
-                        <NavLink to='/academics' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Academics</li>
-                        </NavLink>
-                        <NavLink to='/library' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Library</li>
-                        </NavLink>
-                        <NavLink to='/student-corner' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Student Corner</li>
-                        </NavLink>
-                        <NavLink to='/gallery' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Gallery</li>
-                        </NavLink>
-                        <NavLink to='/contact-us' className="text-decoration-none flex flex-col items-center hover:scale-105">
-                            <li className='py-1 font-bold hover:font-extrabold hover:scale-105 whitespace-nowrap'>Contact Us</li>
-                        </NavLink>
-                    </ul>
-                </div>
-
-                {/* Mobile Menu (only when showMenu is true) */}
-                {showMenu && (
-                    <div className='xl:hidden flex flex-col items-start gap-4 bg-[#1245A8] text-white px-6 py-4 font-semibold text-[15px]'>
-                        <NavLink to='/' onClick={() => setShowMenu(false)} className="hover:text-black font-bold " >Home</NavLink>
-                        <NavLink to='/about-us' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >About Us</NavLink>
-                        <NavLink to='/admission' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >Academics</NavLink>
-                        <NavLink to='/library' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >Library</NavLink>
-                        <NavLink to='/student-corner' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >Student Corner</NavLink>
-                        <NavLink to='/gallery' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >Gallery</NavLink>
-                        <NavLink to='/contact-us' onClick={() => setShowMenu(false)} className="hover:text-black font-bold" >Contact Us</NavLink>
-                    </div>
-                )}
-            </div>
+          {/* Hamburger Icon */}
+          <div className="lg:hidden flex items-center">
+            <FaBars
+              onClick={() => setShowMenu(!showMenu)}
+              className="text-2xl sm:text-3xl text-[#1245A8] cursor-pointer"
+            />
+          </div>
         </div>
-    );
+
+
+        {/* Desktop Nav */}
+        <div className="hidden lg:flex justify-center items-center gap-16 py-3 px-7 bg-[#0b0360]">
+          <ul className="text-white text-[15px] flex flex-wrap gap-10 xl:gap-12 font-semibold">
+            {navLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                className={({ isActive }) =>
+                  `text-decoration-none flex flex-col items-center hover:scale-105 transition ${
+                    isActive
+                      ? 'underline underline-offset-8 decoration-2 decoration-gray-300'
+                      : ''
+                  }`
+                }
+              >
+                <li className="py-1 whitespace-nowrap">{label}</li>
+              </NavLink>
+            ))}
+          </ul>
+        </div>
+
+
+        {/* Mobile Menu */}
+        {showMenu && (
+          <div className="xl:hidden flex flex-col items-start gap-4 bg-[#1245A8] text-white px-6 py-4 font-semibold text-[15px]">
+            {navLinks.map(({ to, label }) => (
+              <NavLink
+                key={to}
+                to={to}
+                onClick={() => setShowMenu(false)}
+                className={({ isActive }) =>
+                  `hover:text-black ${
+                    isActive
+                      ? 'underline underline-offset-4 decoration-white'
+                      : ''
+                  }`
+                }
+              >
+                {label}
+              </NavLink>
+            ))}
+          </div>
+        )}
+
+      </div>
+    </div>
+  );
 };
 
 export default Navbar;

@@ -22,7 +22,9 @@ const App = () => {
   return (
     <div className='mx-0 sm:mx-[0%]'>              
     
+    <div className='mb-16 sm:mb-20 md:mb-20 lg:mb-32 xl:mb-32'>
     {location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />  }              {/* on login page Navbar will not visible) */}   
+    </div>
     
     <Routes>
        <Route path='/' element={<Home />} />                        {/* on "/" route , Home component will appear */}       

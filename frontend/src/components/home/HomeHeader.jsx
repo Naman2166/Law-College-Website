@@ -1,14 +1,49 @@
 import React from 'react'
 import { assets } from '../../assets/assets'
-import { FaSearch, FaArrowRight } from "react-icons/fa";
-
-
+import { useNavigate } from 'react-router-dom'
 
 const HomeHeader = () => {
+  const navigate = useNavigate()
+
   return (
     <div
-      className='flex flex-col md:flex-row flex-wrap bg-cover bg-center px-6 md:px-10 lg:px-20 w-auto h-72 md:min-h-[440px] lg:min-h-[570px] xl:min-h-[671px]'
-      style={{ backgroundImage: `url(${assets.HomePageBgImage})` }} >
+      className="bg-cover bg-center w-full px-6 py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[640px]"
+      style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }}
+    >
+      <div className=" flex flex-row justify-between items-center gap-10 md:gap-16 max-w-7xl mx-auto">
+
+        {/* Left Content */}
+        <div className="text-white text-center md:text-left flex flex-col justify-center items-center gap-12 sm:gap-14">
+          <p className="text-[28px] sm:text-4xl md:text-4xl lg:text-[44px] xl:text-6xl text-center  font-semibold leading-tight">
+            Your Legal Journey <br className="hidden md:block" /> Begins Here
+          </p>
+
+          <div className='text-center flex flex-col justify-center items-center gap-5'>
+          <button
+            onClick={() => navigate('/admission')}
+            className="bg-[#07149f] hover:bg-[#061183] text-[23px] sm:text-3xl md:text-3xl lg:text-[42px] xl:text-5xl font-semibold rounded-md cursor-pointer px-5 py-3 sm:px-6 sm:py-4 md:py-5 md:px-8 lg:py-6 lg:px-12 xl:px-16 xl:py-7 transition-all duration-300 mx-auto md:mx-0"
+          >
+            ADMISSION OPEN
+          </button>
+
+          <p className="text-3xl sm:text-4xl md:text-4xl lg:text-[44px] xl:text-6xl text-center text-yellow-300 font-semibold">
+            For LL.B. Course
+          </p>
+          </div>
+
+        </div>
+
+
+        {/* Right Image */}
+        <div className="flex justify-center items-center">
+          <img
+            src={assets.HomeHeaderImage}
+            alt="Header Illustration"
+            className="h-72 w-80 sm:h-96 sm:w-96 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[530px]"
+          />
+        </div>
+      </div>
+
     </div>
   )
 }
