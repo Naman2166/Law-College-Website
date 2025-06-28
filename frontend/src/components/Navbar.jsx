@@ -37,13 +37,13 @@ const Navbar = () => {
           <div className="hidden lg:flex gap-4 items-center">
             <button
               onClick={() => navigate('/contact-us')}
-              className="bg-white text-[#0b0360] border-2 border-[#0b0360] px-6 py-2 rounded-md text-sm font-semibold hover:bg-[#0b0360] hover:text-white transition duration-300"
+              className="bg-white  text-[#0b0360] border-2 border-[#0b0360] cursor-pointer px-6 py-2 rounded-md text-sm font-semibold hover:scale-105  transition duration-300"
             >
               Enquire Now
             </button>
             <button
               onClick={() => navigate('/contact-us')}
-              className="bg-[#0b0360] text-white px-6 py-2 rounded-md text-sm font-semibold hover:bg-[#060ca3] transition duration-300"
+              className="bg-[#0b0360] text-white border-2 border-[#0b0360] px-6 py-2 cursor-pointer rounded-md text-sm font-semibold hover:scale-105  transition duration-300"
             >
               Apply Now
             </button>
@@ -83,14 +83,14 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {showMenu && (
-          <div className="xl:hidden flex flex-col items-start gap-4 bg-[#1245A8] text-white px-6 py-4 font-semibold text-[15px]">
+          <div className="lg:hidden flex flex-col items-start gap-6 bg-[#0b0360] text-gray-200 px-6 py-4 font-semibold text-[15px]">
             {navLinks.map(({ to, label }) => (
               <NavLink
                 key={to}
                 to={to}
                 onClick={() => setShowMenu(false)}
                 className={({ isActive }) =>
-                  `hover:text-black ${
+                  `hover:text-white hover:scale-110 ${
                     isActive
                       ? 'underline underline-offset-4 decoration-white'
                       : ''
