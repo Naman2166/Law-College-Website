@@ -66,8 +66,9 @@ const Navbar = () => {
               <NavLink
                 key={to}
                 to={to}
+                onClick={()=>scrollTo(0,0)}
                 className={({ isActive }) =>
-                  `text-decoration-none flex flex-col items-center hover:scale-105 transition ${
+                  `text-decoration-none flex flex-col items-center hover:scale-105 transition-all ease-in-out duration-300 ${
                     isActive
                       ? 'underline underline-offset-8 decoration-2 decoration-gray-300'
                       : ''

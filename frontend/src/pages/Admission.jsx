@@ -10,7 +10,7 @@ const admissionMenuItems = [
   { label: 'Fee Structure' },
   { label: 'Rules & Regulations' }
 ];
-
+ 
 const Admission = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
 
