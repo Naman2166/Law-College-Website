@@ -21,12 +21,12 @@ const Gallery = () => {
 
             <div className='flex flex-col gap-8 p-4'>
 
-              <div className='grid grid-cols-3 px-10 gap-5 gap-x-8  text-blue-900'>
-                  <p className='border border-blue-900 font-medium px-10 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Constitution Day 2022</p>
-                  <p className='border border-blue-900 font-medium px-10 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Internal Moot Assessment</p>
-                  <p className='border border-blue-900 font-medium px-10 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Guest lecture 14 dec</p>
-                  <p className='border border-blue-900 font-medium px-10 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Guest lecture</p>
-                  <p className='border border-blue-900 font-medium px-10 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Celebrations</p>
+              <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 px-7 lg:whitespace-nowrap gap-5 gap-x-7 text-blue-900'>
+                  <p className='border border-blue-900 font-medium px-7 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Constitution Day 2022</p>
+                  <p className='border border-blue-900 font-medium px-7 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Internal Moot Assessment</p>
+                  <p className='border border-blue-900 font-medium px-7 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Guest lecture 14 dec</p>
+                  <p className='border border-blue-900 font-medium px-7 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Guest lecture</p>
+                  <p className='border border-blue-900 font-medium px-7 text-center py-1.5 rounded-3xl hover:bg-blue-900 hover:text-white cursor-pointer'>Celebrations</p>
               </div>
 
               <div className="grid grid-cols-3 md:grid-cols-4 gap-4 items-center p-4">
