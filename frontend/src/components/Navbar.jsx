@@ -28,7 +28,7 @@ const Navbar = () => {
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-13 sm:h-16 md:h-18 lg:h-20 w-auto"
+              className="h-13 sm:h-16 md:h-18 lg:h-[4.7rem] w-auto"
               alt="Logo"
             />
           </div>

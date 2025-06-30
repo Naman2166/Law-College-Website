@@ -7,10 +7,10 @@ const HomeHeader = () => {
 
   return (
     <div
-      className="bg-cover bg-center flex justify-center justify-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[640px]"
+      className="bg-cover bg-center flex justify-center items-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[590px]"
       style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }}
     >
-      <div className=" flex flex-row justify-between items-center gap-5 sm:gap-10 md:gap-16 max-w-7xl mx-auto">
+      <div className=" flex flex-row justify-between items-center gap-5 sm:gap-10 md:gap-20 max-w-7xl mx-auto">
 
         {/* Left Content */}
         <div className="text-white text-center md:text-left flex flex-col justify-center items-center gap-8 sm:gap-14">
@@ -21,7 +21,7 @@ const HomeHeader = () => {
           <div className='text-center flex flex-col justify-center items-center gap-5'>
           <button
             onClick={() => navigate('/admission')}
-            className="bg-[#07149f] hover:bg-[#061183] text-[20px] whitespace-nowrap sm:whitespace-normal sm:text-3xl md:text-3xl lg:text-[42px] xl:text-5xl font-semibold rounded-md cursor-pointer px-5 py-3 sm:px-6 sm:py-4 md:py-5 md:px-8 lg:py-6 lg:px-12 xl:px-16 xl:py-7 transition-all duration-300 mx-auto md:mx-0"
+            className="bg-[#07149f] hover:bg-[#061183] text-[20px] whitespace-nowrap sm:whitespace-normal sm:text-3xl md:text-3xl lg:text-[42px] xl:text-5xl font-semibold rounded-md cursor-pointer px-5 py-3 sm:px-6 sm:py-4 md:py-5 md:px-8 lg:py-6 lg:px-12 xl:px-14 xl:py-6 transition-all duration-300 mx-auto md:mx-0"
           >
             ADMISSION OPEN
           </button>
@@ -39,7 +39,7 @@ const HomeHeader = () => {
           <img
             src={assets.HomeHeaderImage}
             alt="Header Illustration"
-            className="h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[530px]"
+            className="h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[510px]"
           />
         </div>
       </div>
