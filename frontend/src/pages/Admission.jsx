@@ -156,16 +156,34 @@ const Admission = () => {
   };
 
   return (
-    <div className="relative">
-      <div>
-        <img src={AdmissionBanner} alt="Admissions Banner" className="w-full h-auto shadow-md" loading="lazy" />
-        <div className="flex">
-          <SidebarMenu menuItems={admissionMenuItems} activeIndex={activeIndex} onMenuClick={setActiveIndex} />
-          <div className="flex-1 p-6">{renderContent()}</div>
-        </div>
+  <div className="relative">
+    <img
+      src={AdmissionBanner}
+      alt="Admissions Banner"
+      className="w-full h-auto shadow-md"
+      loading="lazy"
+    />
+
+    {/* Main Content Wrapper */}
+    <div className="flex min-h-screen relative">
+      {/* Sticky Sidebar */}
+      <div className="sticky top-24 self-start h-fit max-h-[calc(100vh-6rem)] overflow-auto">
+        <SidebarMenu
+          menuItems={admissionMenuItems}
+          activeIndex={activeIndex}
+          onMenuClick={setActiveIndex}
+        />
+      </div>
+
+      {/* Right Scrollable Content */}
+      <div className="flex-1 p-6">
+        {renderContent()}
       </div>
     </div>
-  );
+  </div>
+);
+
+
 };
 
 export default Admission;
