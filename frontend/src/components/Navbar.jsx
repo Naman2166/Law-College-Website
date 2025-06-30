@@ -28,7 +28,7 @@ const Navbar = () => {
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-14 sm:h-16 md:h-18 lg:h-20 w-auto"
+              className="h-12 sm:h-16 md:h-18 lg:h-20 w-auto"
               alt="Logo"
             />
           </div>
@@ -53,7 +53,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <FaBars
               onClick={() => setShowMenu(!showMenu)}
-              className="text-2xl sm:text-3xl text-[#1245A8] cursor-pointer"
+              className="text-3xl sm:text-3xl text-[#1245A8] mr-1 cursor-pointer"
             />
           </div>
         </div>
