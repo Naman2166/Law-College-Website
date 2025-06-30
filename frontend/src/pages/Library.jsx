@@ -63,20 +63,6 @@ const Library = () => {
 
   const renderedContent = useMemo(() => renderContent(), [activeIndex]);
 
-<<<<<<< HEAD
-  return (
-    <div className="relative">
-      <div>
-        <img
-          src={AdmissionBanner} // same background hero image as About Us
-          alt="Library Banner"
-          className="w-full h-auto shadow-md"
-          loading="lazy"
-        />
-        <div className="flex">
-          <SidebarMenu menuItems={libraryMenuItems} activeIndex={activeIndex} onMenuClick={setActiveIndex} />
-          <div className="flex-1 p-6">{renderedContent}</div>
-=======
  return (
   <div className="relative">
     <div>
@@ -95,7 +81,6 @@ const Library = () => {
             activeIndex={activeIndex}
             onMenuClick={setActiveIndex}
           />
->>>>>>> c89f121 (changes applied)
         </div>
 
         {/* Scrollable Right Content */}
