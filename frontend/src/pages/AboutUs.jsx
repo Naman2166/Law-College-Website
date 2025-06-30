@@ -244,18 +244,28 @@ const AboutUs = () => {
   const renderedContent = useMemo(() => renderContent(), [activeIndex]);
 
   return (
-    <div className="relative">
-      <div className={loading ? 'pointer-events-none blur-sm' : ''}>
-        <div>
-          <img src={assets.about} alt="About Us" className="w-full h-auto shadow-md" loading="lazy" />
-          <div className="flex">
-            <SidebarMenu menuItems={aboutMenuItems} activeIndex={activeIndex} onMenuClick={setActiveIndex} />
-            <div className="flex-1 p-6">{renderedContent}</div>
+  <div className="relative">
+    <div className={loading ? 'pointer-events-none blur-sm' : ''}>
+      <div>
+        <img src={assets.about} alt="About Us" className="w-full h-auto shadow-md" loading="lazy" />
+        <div className="flex relative min-h-screen">
+          {/* Sticky Sidebar */}
+          <div className="sticky top-24 self-start h-fit max-h-[calc(100vh-6rem)] overflow-auto">
+            <SidebarMenu
+              menuItems={aboutMenuItems}
+              activeIndex={activeIndex}
+              onMenuClick={setActiveIndex}
+            />
           </div>
+
+          {/* Scrollable Right Content */}
+          <div className="flex-1 p-6">{renderedContent}</div>
         </div>
       </div>
     </div>
-  );
+  </div>
+);
+
 };
 
 export default AboutUs;

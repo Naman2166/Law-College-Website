@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import SidebarMenu from '../components/SidebarMenu';
 import { FaMapMarkerAlt, FaPhoneAlt, FaMailBulk, FaGlobe } from 'react-icons/fa';
 import ContactBanner from "../assets/images/ContactBanner.png"; // Replace with actual banner image
@@ -10,37 +10,60 @@ const contactMenuItems = [
 
 const ContactUs = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
+  const [isHuman, setIsHuman] = useState(false);
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!isHuman) {
+      alert('Please verify you are not a robot!');
+      return;
+    }
+    // proceed with form submission
+    console.log('Form submitted!');
+  };
 
   const renderContent = () => {
     return (
       <div className="space-y-10">
 
         {/* Contact Section */}
+        {/* Contact Section Top Row: Send a Message + Get in Touch */}
         <div className="flex flex-col lg:flex-row px-6 py-10 gap-10">
-
           {/* Send a Message Form */}
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-2xl font-bold text-blue-800">Send a Message</h2>
-            <form className="space-y-4">
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                <input type="text" placeholder="Name" className="p-2 border rounded w-full" />
-                <input type="email" placeholder="Email" className="p-2 border rounded w-full" />
-                <input type="text" placeholder="Subject" className="p-2 border rounded w-full sm:col-span-2" />
-                <input type="text" placeholder="Phone" className="p-2 border rounded w-full sm:col-span-2" />
+            <form className="space-y-4" onSubmit={handleSubmit}>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
+                <input type="text" placeholder="Name" className="p-2 border-b w-full" />
+                <input type="email" placeholder="Email" className="p-2 border-b w-full" />
+                <input type="text" placeholder="Subject" className="p-2 border-b w-full " />
+                <input type="text" placeholder="Phone" className="p-2 border-b w-full" />
               </div>
-              <textarea rows="4" placeholder="Message" className="w-full p-2 border rounded"></textarea>
-              {/* Fake captcha UI */}
-              <div className="border p-3 flex items-center justify-between rounded">
-                <span className="text-sm">I'm not a robot</span>
-                <img src="https://www.gstatic.com/recaptcha/api2/logo_48.png" alt="captcha" className="h-6" />
+              <textarea rows="1" placeholder="Message" className="w-full border-b p-2"></textarea>
+              {/* ✅ I'm not a robot checkbox */}
+              <div className="flex items-center space-x-2 border p-3 rounded shadow-sm">
+                <input
+                  type="checkbox"
+                  id="humanCheck"
+                  checked={isHuman}
+                  onChange={(e) => setIsHuman(e.target.checked)}
+                  className="w-4 h-4"
+                  required
+                />
+                <label htmlFor="humanCheck" className="text-sm select-none">I'm not a robot</label>
               </div>
-              <button className="bg-red-600 text-white px-6 py-2 font-semibold rounded hover:bg-red-700">
+              <button
+                type="submit"
+                className={`px-6 py-2 font-semibold rounded text-white ${isHuman ? 'bg-red-600 hover:bg-red-700' : 'bg-gray-400 cursor-not-allowed'
+                  }`}
+                disabled={!isHuman}
+              >
                 SUBMIT
               </button>
             </form>
           </div>
 
-          {/* Contact Info */}
+          {/* Get in Touch */}
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-2xl font-bold text-blue-800">Get in Touch</h2>
             <div className="space-y-3">
@@ -72,29 +95,31 @@ const ContactUs = () => {
                 </a>
               </p>
             </div>
+          </div>
+        </div>
 
-            {/* Important Contacts */}
-            <div className="mt-6">
-              <h3 className="text-xl font-semibold text-blue-800 mb-3">Important Contacts</h3>
-              <div className="grid sm:grid-cols-2 gap-4 text-base">
-                <p>
-                  <strong className="text-blue-600">Admission Cell Phone:</strong><br />
-                  +91 682 98088
-                </p>
-                <p>
-                  <strong className="text-blue-600">Administrative Office:</strong><br />
-                  +91 (020) 67084035
-                </p>
-                <p>
-                  <strong className="text-blue-600">Principal Office:</strong><br />
-                  +91 (020) 67084033
-                </p>
-                <p>
-                  <strong className="text-blue-600">Faculty Room:</strong><br />
-                  +91 (020) 67084034
-                </p>
+        {/* ✅ Important Contacts in Separate Row (Full Width) */}
+        <div className="px-6 pb-10">
+          <h3 className="text-xl font-semibold text-black mb-4">Important Contacts</h3>
+          <div className="flex flex-wrap justify-center items-center rounded gap-7">
+            {[
+              { title: "Admission Cell Phone", phone: "+91 682 98088" },
+              { title: "Administrative Office", phone: "+91 (020) 67084035" },
+              { title: "Principal Office", phone: "+91 (020) 67084033" },
+              { title: "Faculty Room", phone: "+91 (020) 67084034" },
+            ].map((item, index, arr) => (
+              <div
+                key={index}
+                className={`flex items-start space-x-2 px-6 py-4 ${index !== arr.length - 1 ? 'border-r' : ''
+                  }`}
+              >
+                <FaPhoneAlt className="mt-1 text-gray-700" />
+                <div>
+                  <p className="text-blue-700 font-semibold">{item.title}</p>
+                  <p className="text-sm">{item.phone}</p>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
@@ -116,13 +141,30 @@ const ContactUs = () => {
 
   return (
     <div className="relative">
-      <img src={ContactBanner} alt="Contact Us Banner" className="w-full h-auto shadow-md" />
-      <div className="flex">
-        <SidebarMenu menuItems={contactMenuItems} activeIndex={activeIndex} onMenuClick={setActiveIndex} />
-        <div className="flex-1 p-6">{renderContent()}</div>
+      <img
+        src={ContactBanner}
+        alt="Contact Us Banner"
+        className="w-full h-auto shadow-md"
+      />
+
+      <div className="flex relative min-h-screen">
+        {/* Sticky Sidebar */}
+        <div className="sticky top-24 self-start h-fit max-h-[calc(100vh-6rem)] overflow-auto">
+          <SidebarMenu
+            menuItems={contactMenuItems}
+            activeIndex={activeIndex}
+            onMenuClick={setActiveIndex}
+          />
+        </div>
+
+        {/* Scrollable Right Content */}
+        <div className="flex-1 p-6">
+          {renderContent()}
+        </div>
       </div>
     </div>
   );
+
 };
 
 export default ContactUs;
