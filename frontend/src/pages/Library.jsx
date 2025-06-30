@@ -67,7 +67,7 @@ const Library = () => {
     <div className="relative">
       <div>
         <img
-          src={AdmissionBanner} // same background hero image as About Us
+          src={assets.about} // same background hero image as About Us
           alt="Library Banner"
           className="w-full h-auto shadow-md"
           loading="lazy"
