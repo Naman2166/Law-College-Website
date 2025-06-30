@@ -7,10 +7,10 @@ const HomeHeader = () => {
 
   return (
     <div
-      className="bg-cover bg-center flex justify-center justify-center w-full px-5 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[640px]"
+      className="bg-cover bg-center flex justify-center justify-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[640px]"
       style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }}
     >
-      <div className=" flex flex-row justify-between items-center gap-7 sm:gap-10 md:gap-16 max-w-7xl mx-auto">
+      <div className=" flex flex-row justify-between items-center gap-5 sm:gap-10 md:gap-16 max-w-7xl mx-auto">
 
         {/* Left Content */}
         <div className="text-white text-center md:text-left flex flex-col justify-center items-center gap-8 sm:gap-14">
@@ -39,7 +39,7 @@ const HomeHeader = () => {
           <img
             src={assets.HomeHeaderImage}
             alt="Header Illustration"
-            className="h-[240px] w-[270px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[530px]"
+            className="h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[530px]"
           />
         </div>
       </div>
