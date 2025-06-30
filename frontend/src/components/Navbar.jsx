@@ -23,12 +23,12 @@ const Navbar = () => {
       <div className="lg:flex lg:flex-col text-sm bg-white">
         
         {/* Top Row */}
-        <div className="flex justify-between items-center h-16 sm:h-20 px-3.5 lg:px-4 py-2 bg-white">
+        <div className="flex justify-between items-center h-15 sm:h-18 px-3.5 lg:px-4 py-2 bg-white">
           {/* Logo */}
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-13 sm:h-16 md:h-18 lg:h-[4.7rem] w-auto"
+              className="h-13 sm:h-16 md:h-18 lg:h-18 w-auto"
               alt="Logo"
             />
           </div>

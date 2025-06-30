@@ -7,7 +7,7 @@ const HomeHeader = () => {
 
   return (
     <div
-      className="bg-cover bg-center flex justify-center items-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[580px] xl:min-h-[590px]"
+      className="bg-cover bg-center flex justify-center items-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] xl:min-h-[570px]"
       style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }}
     >
       <div className=" flex flex-row justify-between items-center gap-5 sm:gap-10 md:gap-20 max-w-7xl mx-auto">
@@ -39,7 +39,7 @@ const HomeHeader = () => {
           <img
             src={assets.HomeHeaderImage}
             alt="Header Illustration"
-            className="h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[510px]"
+            className="h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[500px]"
           />
         </div>
       </div>
