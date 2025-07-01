@@ -147,7 +147,7 @@ const ContactUs = () => {
           {/* Google Map */}
           <div className="px-6">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d484092.5510100063!2d74.08471746255876!3d18.575253489247384!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b98543ae1831%3A0x739478ae4419cc18!2sBalaji%20Law%20College!5e0!3m2!1sen!2sin!4v1751034053865!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d944.6353843567696!2d73.66406368286299!3d18.72933287112217!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b1e57875abcb%3A0x85bc84b6ed5990da!2sPCET&#39;s%20Nutan%20Maharashtra%20Institute%20of%20Engineering%20and%20Technology%2C%20Pune!5e0!3m2!1sen!2sin!4v1751391903252!5m2!1sen!2sin"
               width="100%"
               height="400"
               className="rounded-md shadow-md border"
