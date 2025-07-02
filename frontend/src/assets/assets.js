@@ -20,20 +20,15 @@ import CL8 from "./images/CL8.png"
 import CL9 from "./images/CL9.png"
 import CL10 from "./images/CL10.png"
 import CL11 from "./images/CL11.png"
-import Gallery1 from "./images/Gallery1.png"
-import Gallery2 from "./images/Gallery2.png"
-import Gallery3 from "./images/Gallery3.png"
-import Gallery4 from "./images/Gallery4.png"
-import Gallery5 from "./images/Gallery5.png"
-import Gallery6 from "./images/Gallery6.png"
-import Gallery7 from "./images/Gallery7.png"
+import Gallery2 from "./images/Gallery2.jpg"
+import Gallery1 from "./images/Gallery1.jpg"
+import Gallery3 from "./images/Gallery3.jpg"
+import Gallery4 from "./images/Gallery4.jpg"
+import Gallery5 from "./images/Gallery5.jpg"
+import Gallery6 from "./images/Gallery6.jpg"
+import Gallery7 from "./images/Gallery7.jpg"
 import Gallery8 from "./images/Gallery8.png"
-import Gallery9 from "./images/Gallery9.png"
-import Gallery10 from "./images/Gallery10.png"
-import Gallery11 from "./images/Gallery11.png"
-
-
-
+import building from "./images/building.jpg"
 
 
 
@@ -51,6 +46,6 @@ export const assets = {
   HomeHeaderImage,
   CL1,CL2,CL3,CL4,CL5,CL5,CL6,CL7,CL8,CL9,CL10,CL11,
   FooterBg,
-  Gallery1,Gallery2,Gallery3,Gallery4,Gallery5,Gallery6,Gallery7,Gallery8,Gallery9,Gallery10,Gallery11,
-  
+  Gallery1,Gallery2,Gallery3,Gallery4,Gallery5,Gallery6,Gallery7,Gallery8,
+  building,
 }

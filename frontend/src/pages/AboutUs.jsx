@@ -2,9 +2,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { assets } from '../assets/assets';
 import SidebarMenu from '../components/SidebarMenu';
-import About1 from '../assets/images/About1.png';
 import aboutbg2 from '../assets/images/aboutbg2.png';
-import { FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaPrint } from 'react-icons/fa';
+import { FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaPrint, FaChevronDown, FaChevronUp } from 'react-icons/fa';
 import vision from '../assets/images/vision.png';
 import mission from '../assets/images/mission.png';
 import ssk from '../assets/images/ssk.png';
@@ -19,31 +18,27 @@ const aboutMenuItems = [
 
 const AboutUs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [loading, setLoading] = useState(false); // Instantly load content
-
-  useEffect(() => {
-    setLoading(false);
-  }, []);
+  const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const renderContent = () => {
     switch (activeIndex) {
       case 0:
         return (
           <div className="space-y-4">
-            <h2 className="text-4xl font-bold flex items-center mt-10">"DISCIPLINE, DETERMINATION AND DEDICATION"</h2>
-            <h3 className="text-3xl font-semibold mt-10">About the Institution</h3>
+            <h2 className="text-3xl font-bold flex items-center mt-10">"DISCIPLINE, DETERMINATION AND DEDICATION"</h2>
+            <h3 className="text-2xl font-semibold mt-10">About the Institution</h3>
             <p className="text-xl font-medium">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</p>
 
             <div className="flex justify-center mb-10 mt-10">
               <img
-                src={About1}
+                src={assets.building}
                 alt="SSK Law College"
-                className="h-[500px] w-[900px] rounded shadow-md"
+                className="h-[300px] w-[700px] md:h-[500px] w-[900px] rounded shadow-md"
                 loading="lazy"
               />
             </div>
 
-            <div className="grid md:grid-cols-2 text-justify gap-10 text-base leading-relaxed mt-4 p-5">
+            <div className="flex flex-col gap-8 text-base  mt-4 p-5">
               <p>
                 Late Adv. Ku Shalaka Santosh Khandage Law College , Pune was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandage Law College (Affiliated to Savitribai Phule Pune University,
                 Recognized by Govt. of Maharashtra & Bar Council of India), upholds the Society’s philosophy of Discipline, Dedication, and Determination. It is an upcoming institution to cater to the contemporary
@@ -54,7 +49,7 @@ const AboutUs = () => {
                 amenities and ambience required for their versatile development. The institution is avowed and dedicated to creating a new breed of responsible and equipped Law Graduates who will be capable of contributing to the legal
                 fraternity and humanity. Late Adv. Ku Shalaka Santosh Khandage Law College is a place that provides a unique combination of international educational ambience with the traditional Indian rigors of training.
               </p>
-              <p className="-mt-20">
+              <p className="">
                 Late Adv. Ku Shalaka Santosh Khandage Law College stands firm with the backdrop of its topmost Education Institution honing the School & College in India. The same training will hone the
                 lawyers to hold in this cutting-edge competition in the legal arena. Within a short span of its inception, Late Adv. Ku Shalaka Santosh Khandage Law College has successfully catapulted a position in the legal education sector
                 and has stood the test of time in creating Judicial Officers, Legal Advisors, Prosecutors and Corporate Lawyers, who are well placed in the industry.
@@ -65,7 +60,7 @@ const AboutUs = () => {
               className="p-4 mt-6 shadow bg-cover bg-center"
               style={{
                 backgroundImage: `url(${aboutbg2})`,
-                height: '250px',
+                height: '100%',
                 width: '100%'
               }}
             >
@@ -75,12 +70,14 @@ const AboutUs = () => {
               <div className="grid md:grid-cols-2 gap-3">
                 <div className="space-y-5 ml-25">
                   <div className="flex items-start gap-2">
+                    
                     <FaMapMarkerAlt className="text-white text-lg mt-1" />
                     <p className="text-sm leading-relaxed  text-white">
                       55/2-7, Tathwade, Opposite Mumbai<br />
                       Bengaluru Highway, Off, Old Mumbai Rd,<br />
                       Pimpri-Chinchwad, Maharashtra 411033
                     </p>
+
                   </div>
                   <div className="flex items-center gap-2">
                     <FaPhoneAlt className="text-white text-base" />
@@ -99,13 +96,14 @@ const AboutUs = () => {
                   </div>
                 </div>
               </div>
+
             </div>
           </div>
         );
 
       case 1:
         return (
-          <div className="space-y-10 mt-10">
+          <div className="space-y-10 mt-10 flex flex-col gap-10">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <img src={vision} alt="Vision" className="w-full h-auto rounded shadow-md" loading="lazy" />
@@ -121,7 +119,7 @@ const AboutUs = () => {
 
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="order-2 md:order-1">
-                <h2 className="text-3xl font-bold text-blue-800 mb-4 mt-20 flex justify-center items-center">OUR MISSION</h2>
+                <h2 className="text-3xl font-bold text-blue-800 mb-4 flex justify-center items-center">OUR MISSION</h2>
                 <ul className="list-disc list-inside space-y-2 text-justify text-base leading-relaxed">
                   <li>Use cutting-edge pedagogical techniques, experiential learning, and a dynamic
                     curriculum to provide thorough and demanding legal education.</li>
@@ -140,6 +138,7 @@ const AboutUs = () => {
                 <img src={mission} alt="Mission" className="w-full h-auto rounded shadow-md" loading="lazy" />
               </div>
             </div>
+
           </div>
         );
 
@@ -244,13 +243,48 @@ const AboutUs = () => {
   const renderedContent = useMemo(() => renderContent(), [activeIndex]);
 
   return (
-  <div className="relative">
-    <div className={loading ? 'pointer-events-none blur-sm' : ''}>
+    <div className="relative">
       <div>
+        {/* Banner */}
         <img src={assets.about} alt="About Us" className="w-full h-auto shadow-md" loading="lazy" />
-        <div className="flex relative min-h-screen">
-          {/* Sticky Sidebar */}
-          <div className="sticky top-24 self-start h-fit max-h-[calc(100vh-6rem)] overflow-auto">
+
+        {/* Mobile Menu Button */}
+        <div className="lg:hidden relative">
+          <button
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
+          >
+            <span>MENU</span>
+            {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
+          </button>
+
+           {/* menu options */}
+          {isMobileMenuOpen && (
+            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
+              {aboutMenuItems.map((item, index) => (
+                <div
+                  key={index}
+                  onClick={() => {
+                    setActiveIndex(index);
+                    setMobileMenuOpen(false);
+                  }}
+                  className={`px-4 py-2 cursor-pointer hover:bg-white transition ${
+                    activeIndex === index ? 'bg-white text-blue-800 font-semibold' : ''
+                  }`}
+                >
+                  {item.label}
+                </div>
+              ))}
+            </div>
+          )}
+
+        </div>
+
+
+        {/* Content Layout */}
+        <div className="flex flex-col lg:flex-row min-h-screen">
+          {/* Desktop Sidebar */}
+          <div className="hidden lg:block sticky top-24 self-start h-fit max-h-[calc(100vh-6rem)] overflow-auto">
             <SidebarMenu
               menuItems={aboutMenuItems}
               activeIndex={activeIndex}
@@ -258,14 +292,13 @@ const AboutUs = () => {
             />
           </div>
 
-          {/* Scrollable Right Content */}
-          <div className="flex-1 p-6">{renderedContent}</div>
+          {/* Main Content */}
+          <div className="flex-1 p-6 mb-10 lg:p-6">{renderedContent}</div>
         </div>
       </div>
     </div>
-  </div>
-);
-
+  );
 };
 
 export default AboutUs;
+

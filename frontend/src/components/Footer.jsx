@@ -68,7 +68,7 @@ const Footer = () => {
         {/* ----------------- Right Section --------------- */}
         <div className='flex flex-row gap-16 sm:gap-10 md:block'>
 
-          <diV>
+          <div>
           <p className='text-xl font-bold mb-4 whitespace-nowrap'>Student Corner</p>
           <hr className='mb-4 text-gray-400' />
           <ul className='flex flex-col gap-3 text-gray-300 mb-28'>
@@ -78,7 +78,7 @@ const Footer = () => {
             <li className='cursor-pointer'>Admission</li>
             <li className='cursor-pointer'>Infrastructure</li>
           </ul>
-          </diV>
+          </div>
 
           <div className=''>
           <p className='text-xl font-bold mb-4 whitespace-normal'>Follow us on social media</p>

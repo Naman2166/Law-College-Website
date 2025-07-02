@@ -9,7 +9,7 @@ const HomeAboutUs = () => {
         {/* Image Section - 40% */}
         <div className="w-full lg:w-[40%] flex justify-center lg:justify-end">
           <img
-            src={assets.HomePageImage}
+            src={assets.building}
             alt="About Us"
             className="w-full h-auto object-cover rounded-md shadow-lg"
             loading="lazy"
