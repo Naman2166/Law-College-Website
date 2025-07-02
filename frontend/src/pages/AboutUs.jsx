@@ -260,7 +260,7 @@ const AboutUs = () => {
 
            {/* menu options */}
           {isMobileMenuOpen && (
-            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
+            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-0">
               {aboutMenuItems.map((item, index) => (
                 <div
                   key={index}

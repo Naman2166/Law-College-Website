@@ -84,7 +84,7 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {showMenu && (
-          <div className="lg:hidden flex flex-col items-start gap-6 bg-[#0b0360] text-gray-200 px-6 py-4 font-semibold text-[15px]">
+          <div className="lg:hidden flex flex-col items-start gap-6 bg-[#0b0360] text-gray-200 px-6 py-4 font-semibold text-[15px] z-50">
             {navLinks.map(({ to, label }) => (
               <NavLink
                 key={to}
