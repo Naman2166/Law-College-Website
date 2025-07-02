@@ -85,7 +85,7 @@ const Library = () => {
         </button>
 
         {isMobileMenuOpen && (
-          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-50">
+          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
             {libraryMenuItems.map((item, index) => (
               <div
                 key={index}

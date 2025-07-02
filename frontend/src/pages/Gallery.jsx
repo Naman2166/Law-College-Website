@@ -86,14 +86,14 @@ const Gallery = () => {
       <div className="lg:hidden relative">
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
+          className="w-full flex justify-between items-center text-lg bg-blue-950 text-white px-4 py-2"
         >
           <span>MENU</span>
           {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
         </button>
 
         {isMobileMenuOpen && (
-          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-50">
+          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
             {GalleryMenuItems.map((item, index) => (
               <div
                 key={index}

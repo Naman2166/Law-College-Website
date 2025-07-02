@@ -20,7 +20,7 @@ const Admission = () => {
     switch (activeIndex) {
       case 0:
         return (
-          <div className="mt-6 mb-6  space-y-6">
+          <div className="mt-3 mb-6  space-y-6 p-2">
             <h2 className="text-4xl font-bold text-black mb-4 p-1">Eligibility</h2>
             <div className="grid md:grid-cols-2 gap-6 items-center p-1">
               <div>
@@ -37,7 +37,7 @@ const Admission = () => {
         );
       case 1:
         return (
-          <div className="mt-10 space-y-6 px-4">
+          <div className="mt-3 space-y-6 p-2">
             <h2 className="text-3xl font-bold text-black mb-4">Admission Procedure AY2025-26</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
             <p className="text-base leading-relaxed text-justify">
@@ -52,7 +52,7 @@ const Admission = () => {
         );
       case 2:
         return (
-          <div className="mt-10 space-y-6 px-4">
+          <div className="mt-3 space-y-6 p-2">
             <h2 className="text-4xl font-bold text-black mb-4">Fee Structure AY2025-26</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
             <p className="text-base leading-relaxed text-justify">
@@ -65,7 +65,7 @@ const Admission = () => {
         );
       case 3:
         return (
-          <div className="mt-10 space-y-6 px-4">
+          <div className="mt-3 space-y-6 p-2">
             <h2 className="text-3xl font-bold text-black mb-4">Rules & Regulations AY2025-26</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
             <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
@@ -94,14 +94,14 @@ const Admission = () => {
       <div className="lg:hidden relative">
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-          className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
+          className="w-full flex justify-between items-center text-lg bg-blue-950 text-white px-4 py-2"
         >
           <span>MENU</span>
           {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
         </button>
 
         {isMobileMenuOpen && (
-          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-50">
+          <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
             {admissionMenuItems.map((item, index) => (
               <div
                 key={index}

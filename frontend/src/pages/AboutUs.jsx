@@ -25,8 +25,8 @@ const AboutUs = () => {
       case 0:
         return (
           <div className="space-y-4">
-            <h2 className="text-3xl font-bold flex items-center mt-10">"DISCIPLINE, DETERMINATION AND DEDICATION"</h2>
-            <h3 className="text-2xl font-semibold mt-10">About the Institution</h3>
+            <h2 className="text-3xl font-bold flex items-center mt-5">"DISCIPLINE, DETERMINATION AND DEDICATION"</h2>
+            <h3 className="text-2xl font-semibold mt-5">About the Institution</h3>
             <p className="text-xl font-medium">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</p>
 
             <div className="flex justify-center mb-10 mt-10">
@@ -103,7 +103,7 @@ const AboutUs = () => {
 
       case 1:
         return (
-          <div className="space-y-10 mt-10 flex flex-col gap-10">
+          <div className="space-y-10 mt-6 flex flex-col gap-10">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <img src={vision} alt="Vision" className="w-full h-auto rounded shadow-md" loading="lazy" />
@@ -144,7 +144,7 @@ const AboutUs = () => {
 
       case 2:
         return (
-          <div className="mt-10 px-4">
+          <div className="mt-5 p-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">Late Adv. Ku Shalaka Santosh Khandage Law College USP</h2>
             <ul className="list-disc list-inside text-base leading-relaxed space-y-2 text-justify max-w-4xl mx-auto">
               <li>Ranked amongst the top law schools in Pune.</li>
@@ -162,7 +162,7 @@ const AboutUs = () => {
 
       case 3:
         return (
-          <div className="mt-10 px-4 space-y-6">
+          <div className="mt-5 p-4 space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Secretary Desk</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</h3>
             <div className="flex justify-center mt-4">
@@ -201,7 +201,7 @@ const AboutUs = () => {
 
       case 4:
         return (
-          <div className="mt-10 px-4 space-y-6">
+          <div className="mt-5 p-4 space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Principal Message</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</h3>
             <div className="flex justify-center mt-4">
@@ -252,7 +252,7 @@ const AboutUs = () => {
         <div className="lg:hidden relative">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
+            className="w-full flex justify-between items-center text-lg bg-blue-950 text-white px-4 py-2"
           >
             <span>MENU</span>
             {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
@@ -260,7 +260,7 @@ const AboutUs = () => {
 
            {/* menu options */}
           {isMobileMenuOpen && (
-            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-0">
+            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
               {aboutMenuItems.map((item, index) => (
                 <div
                   key={index}
