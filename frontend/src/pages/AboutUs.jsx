@@ -12,7 +12,7 @@ const aboutMenuItems = [
   { label: 'About the Institution' },
   { label: 'Vision and Mission' },
   { label: 'What makes SSK Law College Special' },
-  { label: 'Founder Message' },
+  { label: 'Secretary Desk' },
   { label: "Principal's Message" },
 ];
 
