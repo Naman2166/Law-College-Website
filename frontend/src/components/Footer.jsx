@@ -39,11 +39,11 @@ const Footer = () => {
           <p className='text-xl font-bold mb-3'>Quick Links</p>
           <hr className='mb-3 border-gray-400' />
           <ul className='flex flex-col text-gray-300 gap-2 mb-6'>
-            <li><Link to="/about-us" className='hover:underline'>About</Link></li>
-            <li><Link to="/academics" className='hover:underline'>Academics</Link></li>
-            <li><Link to="/admission" className='hover:underline'>Admission</Link></li>
-            <li><Link to="/gallery" className='hover:underline'>Gallery</Link></li>
-            <li><Link to="/contact-us" className='hover:underline'>Contact Us</Link></li>
+            <li onClick={()=>scrollTo(0,0)}><Link to="/about-us" className='hover:underline'>About</Link></li>
+            <li onClick={()=>scrollTo(0,0)}><Link to="/academics" className='hover:underline'>Academics</Link></li>
+            <li onClick={()=>scrollTo(0,0)}><Link to="/admission" className='hover:underline'>Admission</Link></li>
+            <li onClick={()=>scrollTo(0,0)}><Link to="/gallery" className='hover:underline'>Gallery</Link></li>
+            <li onClick={()=>scrollTo(0,0)}><Link to="/contact-us" className='hover:underline'>Contact Us</Link></li>
           </ul>
 
           <div>
@@ -69,16 +69,16 @@ const Footer = () => {
         </div>
 
         {/* Right Section */}
-        <div className='flex flex-row gap-12 sm:gap-8 md:block'>
+        <div className='flex flex-col md:flex-row gap-12 sm:gap-8 md:block'>
           <div>
             <p className='text-xl font-bold mb-3 whitespace-nowrap'>Student Corner</p>
             <hr className='mb-3 border-gray-400' />
             <ul className='flex flex-col gap-2 text-gray-300 mb-6'>
-              <li><Link to="/syllabus" className='hover:underline'>Syllabus</Link></li>
-              <li><Link to="/library" className='hover:underline'>Library</Link></li>
-              <li><Link to="/committee" className='hover:underline'>Committee</Link></li>
-              <li><Link to="/admission" className='hover:underline'>Admission</Link></li>
-              <li><Link to="/infrastructure" className='hover:underline'>Infrastructure</Link></li>
+              <li onClick={()=>scrollTo(0,0)}><Link to="/syllabus" className='hover:underline'>Syllabus</Link></li>
+              <li onClick={()=>scrollTo(0,0)}><Link to="/library" className='hover:underline'>Library</Link></li>
+              <li onClick={()=>scrollTo(0,0)}><Link to="/committee" className='hover:underline'>Committee</Link></li>
+              <li onClick={()=>scrollTo(0,0)}><Link to="/admission" className='hover:underline'>Admission</Link></li>
+              <li onClick={()=>scrollTo(0,0)}><Link to="/infrastructure" className='hover:underline'>Infrastructure</Link></li>
             </ul>
           </div>
 
@@ -91,6 +91,7 @@ const Footer = () => {
               <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer"><FaYoutube className="hover:text-red-500 text-2xl cursor-pointer" /></a>
             </ul>
           </div>
+
         </div>
 
       </div>
