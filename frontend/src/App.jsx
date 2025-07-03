@@ -12,6 +12,7 @@ import ContactUs from './pages/ContactUs'
 import Footer from './components/Footer'
 import Login from './pages/auth/Login'
 import SignUp from './pages/auth/SignUp'
+import ScrollToTop from './components/ScrollToTop';
 
 
 
@@ -25,7 +26,8 @@ const App = () => {
     <div className='mb-16 sm:mb-20 md:mb-20 lg:mb-28 xl:mb-28'>
     {location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />  }              {/* on login page Navbar will not visible) */}   
     </div>
-    
+
+    <ScrollToTop/>
     <Routes>
        <Route path='/' element={<Home />} />                        {/* on "/" route , Home component will appear */}       
        <Route path='/about-us' element={<AboutUs />} />

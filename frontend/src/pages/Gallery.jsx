@@ -1,8 +1,9 @@
 import React from 'react';
 import SidebarMenu from '../components/SidebarMenu';
 import { FaChevronDown, FaChevronUp } from 'react-icons/fa';
-import AdmissionBanner from "../assets/images/AdmissionBanner.png";
+import GalleryBanner from "../assets/images/gallery.webp";
 import { assets } from '../assets/assets';
+
 
 const GalleryMenuItems = [
   { label: 'Photo Gallery' },
@@ -80,7 +81,7 @@ const Gallery = () => {
   return (
     <div className="relative w-full">
       {/* Banner */}
-      <img src={AdmissionBanner} alt="Gallery Banner" className="w-full h-auto shadow-md" loading="lazy" />
+      <img src={GalleryBanner} alt="Gallery Banner" className="w-full h-auto shadow-md" loading="lazy" />
 
       {/* Mobile Dropdown Menu */}
       <div className="lg:hidden relative">
@@ -145,7 +146,7 @@ export default Gallery;
 
 // import React from 'react'
 // import SidebarMenu from '../components/SidebarMenu';
-// import AdmissionBanner from "../assets/images/AdmissionBanner.png"
+// import GalleryBanner from "../assets/images/GalleryBanner.png"
 // import { assets } from '../assets/assets';
 
 
@@ -305,7 +306,7 @@ export default Gallery;
 //   <div className="relative">
 //     <div>
 //       <img
-//         src={AdmissionBanner}
+//         src={GalleryBanner}
 //         alt="Admissions Banner"
 //         className="w-full h-auto shadow-md"
 //         loading="lazy"
