@@ -6,7 +6,7 @@ import { assets } from '../assets/assets';
 
 const GalleryMenuItems = [
   { label: 'Photo Gallery' },
-  { label: 'Video Gallery' },
+  // { label: 'Video Gallery' },
 ];
 
 const Gallery = () => {
@@ -28,7 +28,8 @@ const Gallery = () => {
               </div>
 
               <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 px-4">
-                {[assets.Gallery1, assets.Gallery2, assets.Gallery3, assets.Gallery4, assets.Gallery5, assets.Gallery6, assets.Gallery7, assets.Gallery8].map((src, idx) => (
+                {[assets.Gallery1, assets.Gallery2, assets.Gallery3, assets.Gallery4, assets.Gallery5, assets.Gallery6, assets.Gallery7, assets.Gallery8, assets.Gallery9,assets.Gallery10, assets.Gallery11,
+                 assets.Gallery12, assets.Gallery13, assets.Gallery14,assets.Gallery15, assets.Gallery16, assets.Gallery17,assets.Gallery18, assets.Gallery19, assets.Gallery20].map((src, idx) => (
                   <div key={idx} className="w-full h-44 sm:h-52 md:h-60 overflow-hidden rounded-lg shadow-md">
                     <img
                       src={src}
