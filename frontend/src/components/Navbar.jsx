@@ -23,8 +23,10 @@ const Navbar = () => {
     { label: '+91 68298088', icon: <FaPhoneAlt /> },
     { label: '6291934548 ', icon: <FaPhoneAlt /> },
     { label: 'blcpune2003@gmail.com', icon: <FaEnvelope /> },
-    { to: '/', label: '', icon: <FaInstagram /> },
-    { to: '/', label: '', icon: <FaFacebookF /> },
+    { to:'https://www.naac.gov.in/' , label: 'NAAC' },
+    { to:'https://www.ugc.ac.in/' , label: 'UGC' },
+    { to: 'https://www.instagram.com', label: '', icon: <FaInstagram  /> },
+    { to: "https://www.facebook.com", label: '', icon: <FaFacebookF  /> },
   ];
 
 
@@ -38,7 +40,7 @@ const Navbar = () => {
 
         {/* Top Nav */}
         <div className="hidden lg:flex justify-center items-center gap-16 py-0.5 px-7 bg-[#0b0360]">
-          <ul className="text-white text-[13px] flex flex-wrap gap-12 xl:gap-16 ">
+          <ul className="text-white text-[13px] flex flex-wrap gap-10 xl:gap-12 ">
             {TopNavLinks.map(({ to = '#', label, icon }, index) => (
               <NavLink
                 key={label + index}
@@ -82,7 +84,7 @@ const Navbar = () => {
 
         {/* Desktop Nav / Bottom nav */}
         <div className="hidden lg:flex justify-center items-center gap-16 py-3 px-7 bg-[#0b0360]">
-          <ul className="text-white text-[15px] flex flex-wrap gap-10 xl:gap-12 font-semibold">
+          <ul className="text-white text-[15px] flex flex-wrap gap-10 xl:gap-14 font-semibold">
             {bottomNavLinks.map(({ to, label }) => (
               <NavLink
                 key={to}
