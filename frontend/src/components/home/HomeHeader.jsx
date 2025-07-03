@@ -41,7 +41,7 @@ const HomeHeader = () => {
           <img
             src={assets.HomeHeaderImage}
             alt="Header Illustration"
-            className="xl:mt-7 h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[460px]"
+            className="xl:mt-7 lg:mt-4 h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[500px] xl:h-[460px]"
           />
         </div>
       </div>
