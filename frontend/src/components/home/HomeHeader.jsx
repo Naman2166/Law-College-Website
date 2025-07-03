@@ -7,7 +7,7 @@ const HomeHeader = () => {
 
   return (
     <div
-      className="bg-cover bg-center flex justify-center items-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] xl:min-h-[550px]"
+      className="bg-cover bg-center flex justify-center items-center w-full px-3 py-9 sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] xl:min-h-[570px]"
       style={{ backgroundImage: `url(${assets.HomeHeaderBgImage})` }}
     >
       <div className=" flex flex-row justify-between items-center gap-5 sm:gap-10 md:gap-20 max-w-7xl mx-auto">
