@@ -34,29 +34,36 @@ const HomeAchievements = () => {
     <div className="w-full py-10 px-4 sm:px-6 lg:px-16 bg-white">
       <div className="flex flex-col justify-center items-center gap-10">
         <p className="text-4xl font-bold">Achievements</p>
-        
+
         {/* card conatiner */}
         <div className="w-full text-center grid grid-cols-2 md:grid-cols-4 gap-4">
-          
+
           {achievements.map((item, index) => (
             //--card---
-            <div
-              key={index}
-              className="relative flex flex-col items-center justify-center gap-3 p-6 py-10 bg-white overflow-hidden"
-            >
-              {/* Background Icon */}
-              {item.icon}
+            <div>
+              
+              <div
+                key={index}
+                className="relative flex flex-col items-center justify-center gap-3 p-6 py-10 bg-white overflow-hidden"
+              >
+                  {/* Background Icon */}
+                  {item.icon}
 
-              {/* Foreground Content */}
-              <div className="relative z-10">
-                <p className="text-6xl text-blue-900 font-bold">{item.value}</p>
+                  {/* Foreground Content */}
+                  <div className="relative z-10">
+                    <p className="text-6xl text-blue-900 font-bold">{item.value}</p>
+                  </div>
               </div>
+                
+                {/* label */}
+               <div className="relative z-10 font-medium text-gray-900 text-center">{item.label}</div>
+            
             </div>
           ))}
 
-          {achievements.map((item, index) => (
-          <div className="relative z-10 font-medium text-gray-900 text-center">{item.label}</div>
-          ))}
+          {/* {achievements.map((item, index) => (
+<div className="relative z-10 font-medium text-gray-900 text-center">{item.label}</div>
+          ))} */}
 
         </div>
 
