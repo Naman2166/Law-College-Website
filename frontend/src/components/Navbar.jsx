@@ -61,12 +61,12 @@ const Navbar = () => {
 
 
         {/* Middle nav */}
-        <div className="flex justify-between lg:justify-center items-center h-15 sm:h-24 px-3.5 lg:px-4 pt-1.5 pb-0 bg-white">
+        <div className="flex justify-between lg:justify-center items-center h-[63px] sm:h-20 md:h-24 px-1.5 sm:px-3.5 lg:px-4 pt-1 sm:pt-1.5 pb-0 bg-white">
           {/* Logo */}
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-13 sm:h-16 md:h-18 lg:h-[100px] w-auto"
+              className="h-[58px] sm:h-[74px] md:h-[90px] lg:h-[100px] w-auto"
               alt="Logo"
             />
           </div>
@@ -76,7 +76,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <FaBars
               onClick={() => setShowMenu(!showMenu)}
-              className="text-3xl sm:text-3xl text-[#1245A8] mr-1 cursor-pointer"
+              className="text-3xl sm:text-4xl text-[#1245A8] mr-1 cursor-pointer"
             />
           </div>
         </div>
