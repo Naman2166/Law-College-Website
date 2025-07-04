@@ -61,12 +61,12 @@ const Navbar = () => {
 
 
         {/* Middle nav */}
-        <div className="flex justify-between lg:justify-center items-center h-15 sm:h-20 px-3.5 lg:px-4 pt-1.5 pb-0 bg-white">
+        <div className="flex justify-between lg:justify-center items-center h-15 sm:h-24 px-3.5 lg:px-4 pt-1.5 pb-0 bg-white">
           {/* Logo */}
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-13 sm:h-16 md:h-18 lg:h-[85px] w-auto"
+              className="h-13 sm:h-16 md:h-18 lg:h-[100px] w-auto"
               alt="Logo"
             />
           </div>
