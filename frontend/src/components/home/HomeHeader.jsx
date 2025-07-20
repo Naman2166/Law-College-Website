@@ -13,7 +13,7 @@ const HomeHeader = () => {
   //motion for mobile and desktop screen
   const containerMotion = {
     initial: isMobile
-      ? { scale: 1.03, opacity: 0.8 }
+      ? { scale: 1, opacity: 1 }
       : { scale: 1.08, opacity: 0.8 },
     whileInView: { scale: 1, opacity: 1 },
     transition: {
