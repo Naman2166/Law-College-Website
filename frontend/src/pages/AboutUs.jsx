@@ -1,30 +1,104 @@
 // src/pages/AboutUs.jsx
 import React, { useEffect, useMemo, useState } from 'react';
+import { useRef } from 'react';
+import { useLocation } from 'react-router-dom';
 import { assets } from '../assets/assets';
 import SidebarMenu from '../components/SidebarMenu';
 import aboutbg2 from '../assets/images/aboutbg2.png';
-import { FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaPrint, FaChevronDown, FaChevronUp } from 'react-icons/fa';
+import { FaMailBulk, FaMapMarkerAlt, FaPhoneAlt, FaPrint, FaFilePdf } from 'react-icons/fa';
 import vision from '../assets/images/vision.png';
 import mission from '../assets/images/mission.png';
 import ssk from '../assets/images/ssk.png';
+import { motion } from 'framer-motion';
+
 
 const aboutMenuItems = [
-  { label: 'About the Institution' },
-  { label: 'Vision and Mission' },
-  { label: 'What makes SSK Law College Special' },
-  { label: 'Secretary Desk' },
-  { label: "Principal's Message" },
+  { label: 'About the Institution', id: 'about-institution' },
+  { label: 'Vision and Mission', id: 'vision-mission' },
+  { label: 'What makes SSK Law College Special', id: 'special' },
+  { label: 'Secretary Desk', id: 'secretary-desk' },
+  { label: "Principal's Message", id: 'principal-message' },
+  { label: 'NMVPM Trust', id: 'nmvpm-trust' },        //new
+  { label: 'Affiliations & Recognitions', id: 'affiliations-recognitions' },     //new
 ];
+
+
+//NMVPM trust section (Case 5)
+const trustMembers = [
+  { sr: 1, name: 'Shri Sanjay (Bala) Bhegade (Ex.Minister for Maharashtra Govt.)', designation: 'President' },
+  { sr: 2, name: 'Mrs. XYZ Patil', designation: 'Vice President' },
+  { sr: 3, name: 'Dr. ABC More', designation: 'Secretary' },
+  { sr: 4, name: 'Mr. Rahul Pawar', designation: 'Treasurer' },
+  { sr: 5, name: 'Ms. Meena Joshi', designation: 'Trustee' },
+  // ➕ Add more members here
+];
+ 
+//Rules PDF (case 6)
+const pdfNotices = [
+  "EOA",
+  "NBA Accrediation Letter",
+  "NMIET 2F Letter",
+  "Certificate Of Accrediation",
+  "Library Rules",
+];
+
+
+
 
 const AboutUs = () => {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
 
+  const location = useLocation();
+
+
+  //for opening specific section, when clicking on link from navbar 
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      const id = hash.replace('#', '');
+      const index = aboutMenuItems.findIndex(item => item.id === id);
+      if (index !== -1) {
+        setActiveIndex(index);
+      }
+    }
+  }, [location]);
+
+  // Scroll to the specific section on load or hash change (separated)
+  useEffect(() => {
+    const hash = location.hash;
+    if (hash) {
+      setTimeout(() => {
+        const id = hash.replace('#', '');
+        const element = document.getElementById(id);
+        if (element) {
+          const yOffset = -150; // adjust for your sticky header height
+          const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+          window.scrollTo({ top: y, behavior: 'smooth' });
+        }
+      }, 200); // delay to ensure DOM is ready
+    }
+  }, [location]);
+  
+
+
+
+
+
+  const contentRef = useRef(null);
+
+  const scrollToContent = () => {
+    contentRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
+
+
   const renderContent = () => {
     switch (activeIndex) {
       case 0:
         return (
-          <div className="space-y-4">
+          <div id="about-institution" className="space-y-4">
             <h2 className="text-3xl font-bold flex items-center mt-5">"DISCIPLINE, DETERMINATION AND DEDICATION"</h2>
             <h3 className="text-2xl font-semibold mt-5">About the Institution</h3>
             <p className="text-xl font-medium">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</p>
@@ -67,10 +141,10 @@ const AboutUs = () => {
               <h4 className="font-semibold text-md mb-1 text-white">Admission Enquiry</h4>
               <p className="text-white text-sm">Admission - Late Adv. Ku Shalaka Santosh Khandage Law College, Pune</p><br />
 
-              <div className="grid md:grid-cols-2 gap-3">
-                <div className="space-y-5 ml-25">
+              <div className="grid md:grid-cols-2 gap-5 md:gap-3">
+                <div className="space-y-5 lg:ml-25">
                   <div className="flex items-start gap-2">
-                    
+
                     <FaMapMarkerAlt className="text-white text-lg mt-1" />
                     <p className="text-sm leading-relaxed  text-white">
                       55/2-7, Tathwade, Opposite Mumbai<br />
@@ -103,7 +177,7 @@ const AboutUs = () => {
 
       case 1:
         return (
-          <div className="space-y-10 mt-6 flex flex-col gap-10">
+          <div id="vision-mission" className="space-y-10 mt-6 flex flex-col gap-10">
             <div className="grid md:grid-cols-2 gap-8 items-center">
               <div>
                 <img src={vision} alt="Vision" className="w-full h-auto rounded shadow-md" loading="lazy" />
@@ -144,7 +218,7 @@ const AboutUs = () => {
 
       case 2:
         return (
-          <div className="mt-5 p-4">
+          <div id='special' className="mt-5 p-4">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-900 mb-6 text-center">Late Adv. Ku Shalaka Santosh Khandage Law College USP</h2>
             <ul className="list-disc list-inside text-base leading-relaxed space-y-2 text-justify max-w-4xl mx-auto">
               <li>Ranked amongst the top law schools in Pune.</li>
@@ -162,7 +236,7 @@ const AboutUs = () => {
 
       case 3:
         return (
-          <div className="mt-5 p-4 space-y-6">
+          <div id='secretary-desk' className="mt-5 p-4 space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Secretary Desk</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</h3>
             <div className="flex justify-center mt-4">
@@ -201,7 +275,7 @@ const AboutUs = () => {
 
       case 4:
         return (
-          <div className="mt-5 p-4 space-y-6">
+          <div id='principal-message' className="mt-5 p-4 space-y-6">
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Principal Message</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandage Law College</h3>
             <div className="flex justify-center mt-4">
@@ -235,6 +309,86 @@ const AboutUs = () => {
           </div>
         );
 
+
+      case 5:
+        return (
+          <div id='nmvpm-trust' className="mt-5 p-2 lg:p-4 space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">NMVPM TRUST</h2>
+            <h3 className="text-xl md:text-2xl font-semibold text-gray-800 text-start">History</h3>
+            <div className="flex justify-center mt-4">
+              <img src={assets.NMVPM} alt="Mr. Santosh Khandage" className="w-56 h-auto rounded shadow-md" loading="lazy" />
+            </div>
+           
+            <div className="max-w-5xl mx-auto text-justify leading-relaxed space-y-4 text-base">
+              <p>
+                Nutan Maharashtra Vidya Prasarak Mandal is a highly respected education society in Maharashtra and is credited with
+                starting national education schools in the Maval Region of Pune district over 100 years ago. The great freedom fighter Lokmanya
+                Bal Gangadhar Tilak was the founder member of the Mandal and was the Chairman of its Governing Body for almost 12 years. The late Hon. Vishnu G. Vijapurkar
+                was the first Secretary of “Samarth Vidyalaya” – the first national school started by the Mandal. He was imprisoned by the British authorities for his so called anti British activities.
+                Vishnu Ganesh Pingle was a Vibrant Student of Samarth Vidyalaya. He became a leader of the Gaddar Party of Lala Hardayal and was hanged by the British for his revolutionary activates when he was barely 26.
+                The Mandal and its schools has such rich heritage. During the first 80 years, the Mandal established good Primary and Secondary Schools in the Maval region with the sole intention of providing education to the youth of relatively backward area of the Pune District. In 1998, it established a Polytechnic College and during the last decade, over 1000 students received quality technical education in the Maval region. The Society (Mandal) has thus helped the nearby community in raising its economic and education standard. The progressive, dynamic and dedicated management of the Nutan Maharashtra Vidya Prasarak Mandal has decided to start a four year degree engineering college from academic year 2008-2009. The new institute is named “Nutan Maharashtra Institute of Engineering & Technology (NMIET). NMIET stands committed to provide quality technical education to its students.”Nutan Maharashtra Institute of Engineering & Technology (NMIET)” is approved by All India Council for Technical Education (AICTE), New Delhi and Director of Technical Education (DTE), Government of Maharashtra. It is affiliated to Pune University.
+              </p>
+            </div>
+                
+             <div className='mt-10 lg:mt-16 text-xl md:text-2xl font-semibold text-blue-900 text-start'>
+               <p className='text-gray-800 font-semibold text-2xl '>Governing Body</p>   
+
+                {/* Table */}
+                <div className="overflow-x-auto mt-6 mx-2 lg:mx-8 xl:mx-10">
+                  <table className="min-w-full border border-gray-300 divide-y divide-gray-200">
+                    <thead className="bg-blue-900">
+                      <tr>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-50 border-r">Sr. No.</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-50 border-r">Name</th>
+                        <th className="px-4 py-2 text-left text-sm font-semibold text-gray-50">Designation</th>
+                      </tr>
+                    </thead>
+                    <tbody className="bg-white divide-y divide-gray-200 text-sm text-gray-700">
+                      {trustMembers.map((member) => (
+                        <tr key={member.sr}>
+                          <td className="px-4 py-2 border-r">{member.sr}</td>
+                          <td className="px-4 py-2 border-r">{member.name}</td>
+                          <td className="px-4 py-2">{member.designation}</td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+             </div>
+
+            
+          </div>
+        );
+
+
+      case 6:
+        return (
+          <div id='affiliations-recognitions' className="mt-5 p-4 space-y-6">
+            <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">AFFILIATIONS & REGULATIONS</h2>
+            
+            {/* PDF */}
+            <div className='flex gap-8 flex-wrap'>
+            {pdfNotices.map((title, index) => (
+            <motion.div
+              initial={{ opacity: 0.5, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              key={index}
+              className="min-w-[140px] sm:min-w-[160px] md:min-w-[180px] max-w-[200px] w-full h-48 bg-white flex flex-col items-center justify-between py-4 rounded shadow-lg border-t-8 border-t-blue-950 shadow-gray-300 hover:scale-105 transition text-center px-3 shrink-0"
+            >
+              <FaFilePdf className="text-red-600 text-5xl sm:text-6xl mb-2" />
+              <p className="text-sm sm:text-[15px] font-semibold text-gray-800 mb-1 w-full">
+                {title}
+              </p>
+              <p className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
+            </motion.div>
+          ))}
+            </div>
+
+          </div>
+        );
+
       default:
         return <p>Select a menu item to see content.</p>;
     }
@@ -245,40 +399,52 @@ const AboutUs = () => {
   return (
     <div className="relative">
       <div>
+
         {/* Banner */}
-        <img src={assets.about} alt="About Us" className="w-full h-auto shadow-md" loading="lazy" />
+        <div
+          className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
+          style={{ backgroundImage: `url(${assets.about})` }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+
+        </div>
+
 
         {/* Mobile Menu Button */}
-        <div className="lg:hidden relative">
+        {/* <div className="lg:hidden relative">
           <button
             onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-            className="w-full flex justify-between items-center text-lg bg-blue-950 text-white px-4 py-2"
+            className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
           >
             <span>MENU</span>
             {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
-          </button>
+          </button> */}
 
-           {/* menu options */}
-          {isMobileMenuOpen && (
-            <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
+        {/* menu options */}
+        {/* {isMobileMenuOpen && (
+            <div ref={contentRef} className="absolute w-full  bg-gray-300 rounded-md shadow-md z-10">
               {aboutMenuItems.map((item, index) => (
                 <div
                   key={index}
                   onClick={() => {
                     setActiveIndex(index);
                     setMobileMenuOpen(false);
+                    scrollToContent();  // 👈 scroll after clicking
                   }}
-                  className={`px-4 py-2 cursor-pointer hover:bg-white transition ${
-                    activeIndex === index ? 'bg-white text-blue-800 font-semibold' : ''
-                  }`}
+                  id={item.id}
+                  className={`px-4 py-2 cursor-pointer hover:bg-white transition ${activeIndex === index ? 'bg-white text-blue-800 font-semibold' : ''
+                    }`}
                 >
                   {item.label}
                 </div>
               ))}
             </div>
-          )}
+          )} */}
 
-        </div>
+        {/* </div> */}
+
+
 
 
         {/* Content Layout */}
@@ -289,6 +455,7 @@ const AboutUs = () => {
               menuItems={aboutMenuItems}
               activeIndex={activeIndex}
               onMenuClick={setActiveIndex}
+
             />
           </div>
 

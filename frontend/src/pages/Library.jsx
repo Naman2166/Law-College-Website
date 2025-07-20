@@ -66,25 +66,30 @@ const Library = () => {
 
   return (
     <div className="relative w-full">
-      {/* Top Banner */}
-      <img
-        src={assets.about}
-        alt="Library Banner"
-        className="w-full h-auto shadow-md"
-        loading="lazy"
-      />
+
+       {/* Banner */}
+       <div
+          className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
+          style={{ backgroundImage: `url(${assets.about})` }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+
+        </div>
+
+
 
       {/* Mobile Dropdown Menu */}
-      <div className="lg:hidden relative">
+      {/* <div className="lg:hidden relative">
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           className="w-full flex justify-between items-center text-lg bg-gray-800 text-white px-4 py-2"
         >
           <span>MENU</span>
           {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
+        </button> */}
 
-        {isMobileMenuOpen && (
+        {/* {isMobileMenuOpen && (
           <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
             {libraryMenuItems.map((item, index) => (
               <div
@@ -99,8 +104,11 @@ const Library = () => {
               </div>
             ))}
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
+
+
+
 
       {/* Layout */}
       <div className="flex flex-col lg:flex-row w-full">

@@ -3,7 +3,7 @@ import React from 'react';
 
 const SidebarMenu = ({ menuItems = [], sidebarWidth = 'md:w-[300px] lg:w-[350px]', activeIndex, onMenuClick }) => {
   return (
-    <aside className={`bg-[#EBEBEB] ${sidebarWidth} min-h-screen`}>
+    <aside className={`bg-gray-200 ${sidebarWidth} min-h-screen`}>
       <div className="pt-6 px-4">
         {menuItems.map((item, index) => {
           const isActive = activeIndex === index;
@@ -12,7 +12,7 @@ const SidebarMenu = ({ menuItems = [], sidebarWidth = 'md:w-[300px] lg:w-[350px]
               key={index}
               onClick={() => onMenuClick(index)}
               className={`cursor-pointer relative py-4 px-3 mt-3 font-medium group overflow-hidden
-                ${isActive ? 'text-[#1245A8]' : 'text-[#007BFF] hover:text-[#1245A8]'}`}
+                ${isActive ? 'text-[#072562]' : 'text-[#0d55a2] hover:text-[#1245A8]'}`}
             >
               <span
                 className={`absolute right-0 top-0 h-full transition-all duration-300

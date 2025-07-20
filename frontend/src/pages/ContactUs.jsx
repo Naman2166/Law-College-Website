@@ -162,11 +162,19 @@ const ContactUs = () => {
 
         return (
         <div className="relative">
-          <img
-            src={ContactBanner}
-            alt="Contact Us Banner"
-            className="w-full h-auto shadow-md"
-          />
+         
+         
+           {/* Banner */}
+        <div
+          className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
+          style={{ backgroundImage: `url(${ContactBanner})` }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+
+        </div>
+
+
 
           <div className="flex relative min-h-screen">
             {/* Sticky Sidebar */}

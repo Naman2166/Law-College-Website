@@ -22,7 +22,7 @@ const App = () => {
   return (
     <div className='mx-0 sm:mx-[0%]'>              
     
-    <div className='mb-14 sm:mb-18 md:mb-18 lg:mb-28 xl:mb-32'>
+    <div className='mb-14 sm:mb-18 md:mb-18 lg:mb-28 xl:mb-31'>                      {/* original  mb-31*/}
     {location.pathname !== '/login' && location.pathname !== '/signup' && <Navbar />  }              {/* on login page Navbar will not visible) */}   
     </div>
                                   

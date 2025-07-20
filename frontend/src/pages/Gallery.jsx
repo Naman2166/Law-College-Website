@@ -81,20 +81,30 @@ const Gallery = () => {
 
   return (
     <div className="relative w-full">
-      {/* Banner */}
-      <img src={GalleryBanner} alt="Gallery Banner" className="w-full h-auto shadow-md" loading="lazy" />
+
+       {/* Banner */}
+       <div
+          className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
+          style={{ backgroundImage: `url(${GalleryBanner})` }}
+        >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+
+        </div>
+
+
 
       {/* Mobile Dropdown Menu */}
-      <div className="lg:hidden relative">
+      {/* <div className="lg:hidden relative">
         <button
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
           className="w-full flex justify-between items-center text-lg bg-blue-950 text-white px-4 py-2"
         >
           <span>MENU</span>
           {isMobileMenuOpen ? <FaChevronUp /> : <FaChevronDown />}
-        </button>
+        </button> */}
 
-        {isMobileMenuOpen && (
+        {/* {isMobileMenuOpen && (
           <div className="absolute w-full py-1.5 bg-gray-300 rounded-md shadow-md z-10">
             {GalleryMenuItems.map((item, index) => (
               <div
@@ -109,8 +119,11 @@ const Gallery = () => {
               </div>
             ))}
           </div>
-        )}
-      </div>
+        )} */}
+      {/* </div> */}
+
+
+
 
       {/* Main Content Area */}
       <div className="flex flex-col lg:flex-row w-full">

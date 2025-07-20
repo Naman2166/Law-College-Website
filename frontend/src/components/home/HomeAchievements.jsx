@@ -5,6 +5,7 @@ import {
   FaBuilding,
   FaRegClock
 } from 'react-icons/fa'
+import {motion} from 'framer-motion'
 
 const achievements = [
   {
@@ -42,7 +43,11 @@ const HomeAchievements = () => {
             //--card---
             <div>
               
-              <div
+              <motion.div
+                initial={{ opacity: 0}}
+                whileInView={{ opacity: 1}}
+                transition={{ duration: 0.6, ease: 'easeOut', delay: 0.5 }}
+                // viewport={{ once: false, amount: 0.3 }}
                 key={index}
                 className="relative flex flex-col items-center justify-center gap-3 p-6 py-10 bg-white overflow-hidden"
               >
@@ -53,7 +58,7 @@ const HomeAchievements = () => {
                   <div className="relative z-10">
                     <p className="text-6xl text-blue-900 font-bold">{item.value}</p>
                   </div>
-              </div>
+              </motion.div>
                 
                 {/* label */}
                <div className="relative z-10 font-medium text-gray-900 text-center">{item.label}</div>

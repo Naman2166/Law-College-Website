@@ -7,6 +7,7 @@ import HomePageImage from "./images/HomePageImage.png"
 import HomePageCoursesBgImage from "./images/HomePageCoursesBgImage.jpg"
 import HomePageCoursesImage from "./images/HomePageCoursesImage.png"
 import FooterBg from "./images/FooterBg.png"
+import FooterBgBlack from "./images/FooterBgBlack.png"
 import ssk from "./images/ssk.png"
 import sns from "./images/sns.png"
 import CL1 from "./images/CL1.png"
@@ -42,6 +43,12 @@ import Gallery19 from "./images/Gallery19.png"
 import Gallery20 from "./images/Gallery20.png"
 import building from "./images/building.jpg"
 import blinkingNew from "./images/blinkingNew.gif"
+import Law from "./images/Law.jpg"
+import Law2 from "./images/Law2.webp"
+import Law3 from "./images/Law3.jpeg"
+import logo from "./images/logo.png"
+import NMVPM from "./images/NMVPM.jpg"
+
 
 
 
@@ -63,4 +70,7 @@ export const assets = {
   Gallery11,Gallery12,Gallery13,Gallery14,Gallery15,Gallery16,Gallery17,Gallery18,Gallery19,Gallery20,
   building,
   blinkingNew,
+  Law,Law2,Law3,
+  FooterBgBlack,
+  logo, NMVPM,
 }
