@@ -30,8 +30,8 @@ const HomeHeader = () => {
       initial={containerMotion.initial}
       whileInView={containerMotion.whileInView}
       transition={containerMotion.transition}
-      className="bg-cover max-lg:bg-center flex justify-center lg:justify-start items-center w-full px-8 lg:px-3 py-9
-        sm:px-6 sm:py-10 md:px-10 lg:px-20 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] xl:min-h-[570px]"
+      className="bg-cover max-lg:bg-center flex justify-center lg:justify-start items-center w-full px-8 py-9
+        sm:px-6 sm:py-10 md:px-10 lg:px-10 min-h-[350px] sm:min-h-[480px] md:min-h-[520px] lg:min-h-[550px] xl:min-h-[570px]"
       style={{ backgroundImage: `url(${assets.Law2})` }}
     >
       <div className="flex flex-row justify-center lg:justify-start items-center gap-5 sm:gap-10 md:gap-20 max-w-7xl w-full">
