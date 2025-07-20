@@ -13,7 +13,7 @@ const HomeDirectorDesk = () => {
   //Text motion for mobile and desktop screen
   const textMotion = {
     initial: isMobile
-      ? { opacity: 0, x: -50 }
+      ? { opacity: 1, x: 0 }
       : { opacity: 0, x: -50 },
     whileInView: { opacity: 1, x: 0 },
     transition: {

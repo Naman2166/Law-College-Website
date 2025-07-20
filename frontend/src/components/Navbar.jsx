@@ -92,7 +92,7 @@ const Navbar = () => {
       {/* Top Nav */}
       <div className="hidden lg:flex justify-end items-center gap-16 py-0.5 bg-[#05052e] ">   {/* original : bg-[#0b0360]*/}
         <ul 
-        className="text-white text-[13px] flex flex-wrap gap-10 xl:gap-10 px-16">
+        className="text-white text-[13px] flex flex-wrap gap-8 xl:gap-8 px-16">
           {TopNavLinks.map(({ to = '#', label, icon }, index) => (
             <div className="flex items-center" key={label + index}>
               <NavLink
@@ -103,14 +103,14 @@ const Navbar = () => {
                   }`}
               >
                 <li className="py-1 whitespace-nowrap flex items-center justify-center gap-2">
-                  {icon && <span className="text-sm pt-0.5">{icon}</span>}
+                  {icon && <span className="text-[13px] pt-0.5">{icon}</span>}
                   {label}
                 </li>
               </NavLink>
 
               {/* Add divider only if it's not the last item */}
               {index !== TopNavLinks.length - 1 && (
-                <div className="mx-4 text-gray-400 text-lg">|</div>
+                <div className="mx-4 text-gray-400 text-[16px]">|</div>
               )}
             </div>
           ))}
@@ -148,7 +148,7 @@ const Navbar = () => {
         {/* Desktop Nav / Right part */}
 
         <div className="relative hidden lg:flex justify-end items-center gap-16 py-3 px-5 bg-white">
-          <ul className="text-gray-800 text-[16px] flex flex-wrap gap-8 xl:gap-8 font-semibold">
+          <ul className="text-gray-800 text-[14px] flex flex-wrap gap-8 xl:gap-7 font-semibold">
             {bottomNavLinks.map(({ to, label, arrow }, index) => (
               <div
                 key={to}
