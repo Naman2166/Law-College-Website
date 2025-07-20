@@ -198,7 +198,7 @@ const Navbar = () => {
                       initial={{ y: '10%', opacity:0 }}
                       animate={{ y: 0, opacity:1, transition:{ duration: 0.5 } }}
                       exit={{ y: '4%', opacity:0, transition:{duration:0.3} }}
-                      className="absolute top-full -mt-2 pt-3 w-64 bg-transparent">
+                      className="absolute top-full -mt-2 pt-3 w-60 bg-transparent">
                       <div className='bg-white rounded-b-lg shadow-lg z-50 py-0 border-t-[5px] border-t-[#0d0d5a]'>      {/* original : border-t-blue-800 */}
                         {subMenus[label].map((item, idx) => (
                           <motion.div
@@ -208,7 +208,7 @@ const Navbar = () => {
                               setIsMenuOpen(false);
                               navigate(item.to);
                             }}
-                            className={` flex flex-col cursor-pointer text-sm font-normal text-gray-900 hover:bg-gray-200 hover:text-gray-800 hover:font-semibold  transition ${activeIndex === idx
+                            className={` flex flex-col cursor-pointer text-[13px] font-normal text-gray-900 hover:bg-gray-200 hover:text-gray-800 hover:font-semibold  transition ${activeIndex === idx
                               ? ""
                               : ""
                               }`}
