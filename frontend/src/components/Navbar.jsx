@@ -148,7 +148,7 @@ const Navbar = () => {
         {/* Desktop Nav / Right part */}
 
         <div className="relative hidden lg:flex justify-end items-center gap-16 py-3 px-5 bg-white">
-          <ul className="text-gray-800 text-[15px] flex flex-wrap gap-8 xl:gap-6 font-semibold">
+          <ul className="text-gray-800 text-[16px] flex flex-wrap gap-8 xl:gap-8 font-semibold">
             {bottomNavLinks.map(({ to, label, arrow }, index) => (
               <div
                 key={to}
