@@ -139,7 +139,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <FaBars
               onClick={() => setShowMenu(!showMenu)}
-              className="text-[30px] sm:text-[33px] text-[#1245A8] cursor-pointer"
+              className="text-3xl sm:text-4xl text-[#1245A8] cursor-pointer"
             />
           </div>
         </div>
@@ -147,8 +147,8 @@ const Navbar = () => {
 
         {/* Desktop Nav / Right part */}
 
-        <div className="relative hidden lg:flex justify-end items-center gap-16 py-3 px-7 bg-white">
-          <ul className="text-gray-800 text-[16px] flex flex-wrap gap-8 xl:gap-8 font-semibold">
+        <div className="relative hidden lg:flex justify-end items-center gap-16 py-3 px-5 bg-white">
+          <ul className="text-gray-800 text-[14px] flex flex-wrap gap-8 xl:gap-6 font-semibold">
             {bottomNavLinks.map(({ to, label, arrow }, index) => (
               <div
                 key={to}
