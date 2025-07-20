@@ -38,7 +38,7 @@ const HomeAboutUs = () => {
 
   return (
     <div className="w-full bg-white px-4 py-12 sm:px-6 lg:px-10">
-      <div className="rounded-2xl overflow-hidden flex flex-col gap-8 py-8 px-4 sm:px-8">
+      <div className="rounded-2xl overflow-hidden flex flex-col gap-8 py-8 px-4 sm:px-8 ">
 
         {/* Title */}
         <h2 className="text-3xl sm:text-4xl font-extrabold text-center text-blue-950" >
@@ -70,7 +70,7 @@ const HomeAboutUs = () => {
             whileInView={textMotion.whileInView}
             transition={textMotion.transition}
             viewport={{ once: false, amount: 0.3 }}
-            className="w-full lg:w-6/12 flex flex-col space-y-4 text-gray-800"
+            className="w-full lg:w-6/12 flex flex-col space-y-4 text-gray-800 shadow-md shadow-gray-800 p-3 rounded-xl"
           >
             <p className="text-base sm:text-[16px] font-semibold text-gray-700">
               Foster an inclusive and collaborative academic environment to promote interdisciplinary
