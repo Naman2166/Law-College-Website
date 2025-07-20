@@ -47,7 +47,7 @@ const HomeHeader = () => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2, duration: 0.6 }}
-            className="text-[28px] sm:text-4xl md:text-4xl lg:text-[40px] xl:text-6xl font-semibold leading-tight"
+            className="text-[28px] sm:text-4xl md:text-4xl lg:text-[40px] xl:text-[55px] font-semibold leading-tight"
           >
             Your Legal Journey <br className="hidden md:block" /> Begins Here
           </motion.p>
@@ -62,7 +62,7 @@ const HomeHeader = () => {
               onClick={() => navigate('/admission')}
               className="flex flex-row justify-center items-center gap-3 sm:gap-5 bg-[#09024f] hover:bg-[#061183] text-[20px] 
               whitespace-nowrap sm:whitespace-normal sm:text-3xl md:text-3xl lg:text-[35px] xl:text-[37px] font-semibold rounded-md 
-              cursor-pointer px-5 py-3 sm:px-6 sm:py-4 md:py-5 md:px-8 lg:py-6 lg:px-12 xl:px-12 xl:py-5 transition-all duration-300"
+              cursor-pointer px-5 py-3 sm:px-6 sm:py-4 md:py-5 md:px-8 lg:py-4 lg:px-10 xl:px-10 xl:py-4 transition-all duration-300"
             >
               <p className="whitespace-nowrap">ADMISSION OPEN</p>
             </button>
@@ -71,7 +71,7 @@ const HomeHeader = () => {
               initial={{ opacity: 0, y: 15 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="text-3xl sm:text-4xl md:text-4xl lg:text-[44px] xl:text-5xl text-amber-400 sm:text-amber-500 font-semibold"
+              className="text-3xl sm:text-4xl md:text-4xl lg:text-[44px] xl:text-[52px] text-amber-400 sm:text-amber-500 font-semibold"
             >
               For LL.B. Course
             </motion.p>
