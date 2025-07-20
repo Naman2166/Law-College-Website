@@ -120,10 +120,10 @@ const Navbar = () => {
 
 
       {/* bottom nav */}
-      <div className="lg:flex lg:flex-row justify-between pr-2 text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
+      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
 
         {/* Left part */}
-        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-1.5 sm:px-3.5 lg:px-4 pt-1 sm:pt-0 pb-0 bg-white">
+        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-1.5 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
           {/* Logo */}
           <div>
             <img
@@ -139,7 +139,7 @@ const Navbar = () => {
           <div className="lg:hidden flex items-center">
             <FaBars
               onClick={() => setShowMenu(!showMenu)}
-              className="text-3xl sm:text-4xl text-[#1245A8] cursor-pointer"
+              className="text-[30px] sm:text-[33px] text-[#1245A8] cursor-pointer"
             />
           </div>
         </div>
