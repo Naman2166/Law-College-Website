@@ -123,7 +123,7 @@ const Navbar = () => {
       <div className="lg:flex lg:flex-row justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
 
         {/* Left part */}
-        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-1.5 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
+        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
           {/* Logo */}
           <div>
             <img
