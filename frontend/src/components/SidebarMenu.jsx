@@ -10,8 +10,8 @@ const SidebarMenu = ({ menuItems = [], sidebarWidth = 'md:w-[300px] lg:w-[350px]
           return (
             <div
               key={index}
-              onClick={() => onMenuClick(index)}
-              className={`cursor-pointer relative py-4 px-3 mt-3 font-medium group overflow-hidden
+              onClick={() => {onMenuClick(index),scrollTo(0,300)} }
+              className={`cursor-pointer relative py-4 px-3 mt-3 font-medium group overflow-hidden transition-all ease-in-out duration-300
                 ${isActive ? 'text-[#072562]' : 'text-[#0d55a2] hover:text-[#1245A8]'}`}
             >
               <span
