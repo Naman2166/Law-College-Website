@@ -28,10 +28,8 @@ const Navbar = () => {
 
   const TopNavLinks = [
     { label: 'Pune', icon: <FaMapMarkerAlt /> },
-    { label: '+91 68298088', icon: <FaPhoneAlt /> },
-    { label: '6291934548 ', icon: <FaPhoneAlt /> },
-    { label: 'blcpune2003@gmail.com', icon: <FaEnvelope /> },
-    { to: 'https://www.naac.gov.in/', label: 'NAAC' },
+    { label: '+91-7030082408', icon: <FaPhoneAlt /> },
+    { label: 'adv.sskvm@gmail.com', icon: <FaEnvelope /> },
     { to: 'https://www.ugc.ac.in/', label: 'UGC' },
     // { to: 'https://www.instagram.com', label: '', icon: <FaInstagram /> },
     // { to: "https://www.facebook.com", label: '', icon: <FaFacebookF /> },
@@ -42,20 +40,20 @@ const Navbar = () => {
     'About Us': [
       { label: 'About the Institution', to: '/about-us#about-institution' },
       { label: 'Vision and Mission ', to: '/about-us#vision-mission' },
-      { label: 'NMVPM Trust', to: '/about-us#nmvpm-trust' },         //new
       { label: 'What makes SSK Law College Special', to: '/about-us#special' },
-      { label: 'Affiliations & Recognitions', to: '/about-us#affiliations-recognitions' },  //new
       { label: 'Secretary Desk', to: '/about-us#secretary-desk' },
       { label: "Principal's Message", to: '/about-us#principal-message' },
+      { label: 'NMVPM Trust', to: '/about-us#nmvpm-trust' },         //new
+      { label: 'Affiliations & Recognitions', to: '/about-us#affiliations-recognitions' },  //new
     ],
     'Admission': [
       { label: 'Eligibility', to: '/admission#eligibility' },
       { label: 'Admission Procedure', to: '/admission#admission-procedure' },
       { label: 'Fee Structure', to: '/admission#fee-structure' },
       { label: 'Fee Refund Policy', to: '/admission#refund-policy' },      //new
+      { label: 'Rules and Regulations', to: '/admission#rules' },
       { label: 'Document Required', to: '/admission#document-required' },      //new
       { label: 'Information Brochure', to: '/admission#information-brochure' },   //new
-      { label: 'Rules and Regulations', to: '/admission#rules' },
     ],
     'Student Corner': [
       { label: 'Sports Facilty', to: '/student-corner#sports-facility' },     //new
@@ -120,7 +118,7 @@ const Navbar = () => {
 
 
       {/* bottom nav */}
-      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
+      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white py-0.5">               {/* previous color : bg-[#0b0360] */}
 
         {/* Left part */}
         <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
@@ -128,7 +126,7 @@ const Navbar = () => {
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[92px] w-auto cursor-pointer"
+              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[96px] w-auto cursor-pointer"
               alt="Logo"
               onClick={() => navigate("/")}
             />

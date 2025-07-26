@@ -13,17 +13,27 @@ const admissionMenuItems = [
   { label: 'Eligibility' , id :'eligibility' },
   { label: 'Admission Procedure', id :'admission-procedure'  },
   { label: 'Fee Structure', id :'fee-structure'  },
-  { label: 'Rules & Regulations', id :'rules'  },
   { label: 'Fee Refund Policy', id :'refund-policy'  },      //new
+  { label: 'Rules & Regulations', id :'rules'  },
   { label: 'Document Required', id :'document-required'  },      //new
   { label: 'Information Brochure', id :'information-brochure'  },   //new
 ]; 
 
 
-//Refund Policy PDF (case 4)
-const pdfNotices = [
-  "UGF Fee Refund Policy",
-  "ARA Fee Refund Policy",
+//Refund Policy PDF (case 3)
+const feeRefundPdf = [
+  {label:"Fee Refund Policy", pdf:""},
+];
+
+//Refund Policy PDF (case 5)
+const documentRequiredPdf = [
+  {label:"Documents Required", pdf:"/Required_Documents.pdf"},
+];
+
+//Refund Policy PDF (case 6)
+const informationBrochurePdf = [
+  {label:"Brochure 1", pdf:"/Information_Brochure_1.jpeg"},
+  {label:"Brochure 2", pdf:"/Information_Brochure_2.jpeg"},
 ];
 
 
@@ -88,10 +98,11 @@ const Admission = () => {
       case 0:
         return (
           <div id='eligibility' className="mt-3 mb-6  space-y-6 p-2">
+           
             <h2 className="text-4xl font-bold text-black mb-4 p-1">Eligibility</h2>
-            <div className="grid md:grid-cols-2 gap-6 items-center p-1">
+            <div className="grid md:grid-cols-1 gap-6 items-center  p-1">
               <div>
-                <img src={Eligibility} alt="Eligibility - Law" className="w-full h-auto rounded" loading="lazy" />
+                <img src={Eligibility} alt="Eligibility - Law" className="w-full sm:w-1/2 md:w-1/3 h-auto rounded" loading="lazy" />
               </div>
               <div>
                 <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">L.L.B. (3 Year Law Course)</h3>
@@ -100,28 +111,7 @@ const Admission = () => {
                 </p>
               </div>
             </div>
-            <div className="grid md:grid-cols-2 gap-6 items-center p-1">
-              <div>
-                <img src={Eligibility} alt="Eligibility - Law" className="w-full h-auto rounded" loading="lazy" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">L.L.B. (3 Year Law Course)</h3>
-                <p className="text-base leading-relaxed text-justify">
-                  <strong className="text-blue-600">Academic qualification -</strong> A student passing a Bachelor’s degree examination with Minimum 45% Marks in any faculty of this University or any other Recognized University shall be eligible for admission to the First year LL.B. Course (three-year degree course). There shall be relaxation of 5% marks in case of SC/ST students. Non-Zero Score in MAH-LLB-3 CET will not be eligible for the admission.
-                </p>
-              </div>
-            </div>
-            <div className="grid md:grid-cols-2 gap-6 items-center p-1">
-              <div>
-                <img src={Eligibility} alt="Eligibility - Law" className="w-full h-auto rounded" loading="lazy" />
-              </div>
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold text-blue-800 mb-2">L.L.B. (3 Year Law Course)</h3>
-                <p className="text-base leading-relaxed text-justify">
-                  <strong className="text-blue-600">Academic qualification -</strong> A student passing a Bachelor’s degree examination with Minimum 45% Marks in any faculty of this University or any other Recognized University shall be eligible for admission to the First year LL.B. Course (three-year degree course). There shall be relaxation of 5% marks in case of SC/ST students. Non-Zero Score in MAH-LLB-3 CET will not be eligible for the admission.
-                </p>
-              </div>
-            </div>
+            
           </div>
         );
 
@@ -135,9 +125,9 @@ const Admission = () => {
               In accordance with MAH CET Law, the following documents must be presented when admitting to the college.
             </p>
             <ul className="list-disc list-inside space-y-2 text-base">
-              <li>Documents for LL.B (3 YEARS). <a href="#" className="text-blue-600 hover:underline">Click Here</a></li>
-              <li>CAP Brochure for AY 2025-26. <a href="#" className="text-blue-600 hover:underline">Click Here</a></li>
-              <li>Conversion Certificate for multiple attempts. <a href="#" className="text-blue-600 hover:underline">Click Here</a></li>
+              <li>Documents for LL.B (3 YEARS). <a href="#document-required" className="text-blue-600 hover:underline">Click Here</a></li>
+              <li>Information Brochure for AY 2025-26. <a href="#information-brochure" className="text-blue-600 hover:underline">Click Here</a></li>
+              <li>Conversion Certificate for multiple attempts.</li>
             </ul>
           </div>
         );
@@ -149,7 +139,7 @@ const Admission = () => {
             <h2 className="text-4xl font-bold text-black mb-4">Fee Structure AY2025-26</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
             <p className="text-base leading-relaxed text-justify">
-              Fees Regulating Authority sets the fee: <strong>Rs. 33,000</strong> for first year. Full payment is required at admission.
+              Fees Regulating Authority sets the fee: <strong>Rs. 35,000</strong> for first year. Full payment is required at admission.
             </p>
             <p className="text-base leading-relaxed text-justify">
               Unpaid students may be barred from exams. Pay all dues on time as notified.
@@ -158,32 +148,14 @@ const Admission = () => {
         );
 
 
-      case 3:
-        return (
-          <div id='rules' className="mt-3 space-y-6 p-2">
-            <h2 className="text-3xl font-bold text-black mb-4">Rules & Regulations AY2025-26</h2>
-            <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
-            <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
-              <li>Discipline, Dedication & Determination is our motto.</li>
-              <li>College hours: 8:00 am – 1:30 pm.</li>
-              <li>Bio-Metric Attendance is compulsory.</li>
-              <li>Below 75% attendance = disqualification from exams.</li>
-              <li>Assignments, class tests, surprise tests will be taken seriously.</li>
-              <li>Freedom to approach faculty, principal, or management.</li>
-              <li>Uniform is mandatory except Saturdays.</li>
-              <li>Remove shoes, socks, gadgets during exams.</li>
-            </ul>
-          </div>
-        );
 
-
-        case 4:
+        case 3:
         return (
           <div id='refund-policy' className="mt-3 space-y-6 p-2">
             <h2 className="text-3xl font-bold text-black mb-7">Fee Refund Policy</h2>
             {/* PDF */}
             <div className='flex gap-8 flex-wrap'>
-            {pdfNotices.map((title, index) => (
+            {feeRefundPdf.map((item, index) => (
             <motion.div
               initial={{ opacity: 0.5, y: -30 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -194,24 +166,24 @@ const Admission = () => {
             >
               <FaFilePdf className="text-red-600 text-5xl sm:text-6xl mb-2" />
               <p className="text-sm sm:text-[15px] font-semibold text-gray-800 mb-1 w-full">
-                {title}
+                {item.label}
               </p>
-              <p className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
+              <p onClick={() => window.open(item.pdf, "_blank")} className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
             </motion.div>
           ))}
             </div>
           </div>
         );
         
-
-        case 5:
+       
+        case 4:
         return (
-          <div id='information-brochure' className="mt-3 space-y-6 p-2">
-            <h2 className="text-3xl font-bold text-black mb-4">Document Required</h2>
+          <div id='rules' className="mt-3 space-y-6 p-2">
+            <h2 className="text-3xl font-bold text-black mb-4">Rules & Regulations AY2025-26</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
             <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
               <li>Discipline, Dedication & Determination is our motto.</li>
-              <li>College hours: 8:00 am – 1:30 pm.</li>
+              <li>College hours: 9:00 am – 4:00 pm.</li>
               <li>Bio-Metric Attendance is compulsory.</li>
               <li>Below 75% attendance = disqualification from exams.</li>
               <li>Assignments, class tests, surprise tests will be taken seriously.</li>
@@ -219,6 +191,35 @@ const Admission = () => {
               <li>Uniform is mandatory except Saturdays.</li>
               <li>Remove shoes, socks, gadgets during exams.</li>
             </ul>
+          </div>
+        );
+
+
+        case 5:
+        return (
+          <div id='document-required' className="mt-3 space-y-6 p-2">
+            <h2 className="text-3xl font-bold text-black mb-4">Document Required</h2>
+            <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
+            {/* PDF */}
+            <div className='flex gap-8 flex-wrap'>
+            {documentRequiredPdf.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0.5, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              key={index}
+              className="min-w-[140px] sm:min-w-[160px] md:min-w-[180px] max-w-[200px] w-full h-48 bg-white flex flex-col items-center justify-between py-4 rounded shadow-lg border-t-8 border-t-blue-950 shadow-gray-300 hover:scale-105 transition text-center px-3 shrink-0"
+            >
+              <FaFilePdf className="text-red-600 text-5xl sm:text-6xl mb-2" />
+              <p className="text-sm sm:text-[15px] font-semibold text-gray-800 mb-1 w-full">
+                {item.label}
+              </p>
+              <p onClick={() => window.open(item.pdf, "_blank")} className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
+            </motion.div>
+          ))}
+            </div>
+
           </div>
         );
 
@@ -228,16 +229,25 @@ const Admission = () => {
           <div id='information-brochure' className="mt-3 space-y-6 p-2">
             <h2 className="text-3xl font-bold text-black mb-4">Information Brochure</h2>
             <h3 className="text-xl font-bold text-blue-800">L.L.B. (3 Year Law Course)</h3>
-            <ul className="list-disc list-inside space-y-2 text-base leading-relaxed">
-              <li>Discipline, Dedication & Determination is our motto.</li>
-              <li>College hours: 8:00 am – 1:30 pm.</li>
-              <li>Bio-Metric Attendance is compulsory.</li>
-              <li>Below 75% attendance = disqualification from exams.</li>
-              <li>Assignments, class tests, surprise tests will be taken seriously.</li>
-              <li>Freedom to approach faculty, principal, or management.</li>
-              <li>Uniform is mandatory except Saturdays.</li>
-              <li>Remove shoes, socks, gadgets during exams.</li>
-            </ul>
+             {/* PDF */}
+            <div className='flex gap-8 flex-wrap'>
+            {informationBrochurePdf.map((item, index) => (
+            <motion.div
+              initial={{ opacity: 0.5, y: -30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.4, ease: 'easeOut', delay: 0.1 }}
+              viewport={{ once: false, amount: 0.3 }}
+              key={index}
+              className="min-w-[140px] sm:min-w-[160px] md:min-w-[180px] max-w-[200px] w-full h-48 bg-white flex flex-col items-center justify-between py-4 rounded shadow-lg border-t-8 border-t-blue-950 shadow-gray-300 hover:scale-105 transition text-center px-3 shrink-0"
+            >
+              <FaFilePdf className="text-red-600 text-5xl sm:text-6xl mb-2" />
+              <p className="text-sm sm:text-[15px] font-semibold text-gray-800 mb-1 w-full">
+                {item.label}
+              </p>
+              <p onClick={() => window.open(item.pdf, "_blank")} className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
+            </motion.div>
+          ))}
+            </div>
           </div>
         );
 

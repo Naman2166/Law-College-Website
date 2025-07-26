@@ -1,7 +1,7 @@
 import React from 'react';
 import { assets } from '../assets/assets';
 import { Link, useNavigate } from 'react-router-dom';
-import { FaFacebookF, FaInstagram, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram,FaBuilding, FaYoutube, FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from 'react-icons/fa';
 
 const Footer = () => {
   const navigate = useNavigate();
@@ -20,23 +20,29 @@ const Footer = () => {
 
         {/* Contact Info */}
         <div>
-          <p className="text-xl font-bold mb-3">Get In Touch With Us</p>
+          <p className="text-xl font-bold">Get In Touch With Us</p>
           <hr className="mb-4 border-gray-400" />
           <ul className="text-gray-300 space-y-4">
             <li className="flex items-start gap-2">
+              {/* <FaBuilding className=" text-lg" /> */}
+              <span>
+                 Late Adv. Ku Shalaka Santosh Khandge Law College, Pune
+              </span>
+            </li>
+            <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="mt-1 text-lg" />
               <span>
-                Samarth Vidya Sankul, Vishnupuri, Talegaon Dabhade, <br />
-                Pune, Maharashtra 410507
+                Talegaon Dabhade, Tal. Maval <br />
+                Dist-Pune, Maharashtra 410507
               </span>
             </li>
             <li className="flex items-start gap-2">
               <FaPhoneAlt className="text-lg" />
-              <span>020-6291934548 / 34 / 33 / 9168290808</span>
+              <span>+91-7030082408</span>
             </li>
             <li className="flex items-start gap-2">
               <FaEnvelope className="text-lg" />
-              <span>blcpune2003@gmail.com</span>
+              <span>adv.sskvm@gmail.com</span>
             </li>
           </ul>
         </div>
@@ -70,7 +76,6 @@ const Footer = () => {
             <li><a href="https://www.barcouncilofindia.org/" target="_blank" rel="noopener noreferrer" className="hover:underline">Bar Council of India (BCI)</a></li>
             <li><a href="https://www.ugc.ac.in/" target="_blank" rel="noopener noreferrer" className="hover:underline">UGC</a></li>
             <li><button onClick={() => handleNavigate('/anti-ragging')} className="hover:underline">Anti-Ragging Policy</button></li>
-            <li><a href="https://www.naac.gov.in/" target="_blank" rel="noopener noreferrer" className="hover:underline">NAAC</a></li>
             <li><button onClick={() => handleNavigate('/emergency-helpline')} className="hover:underline">Emergency Helpline</button></li>
           </ul>
         </div>

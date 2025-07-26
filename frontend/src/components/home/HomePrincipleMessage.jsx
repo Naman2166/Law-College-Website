@@ -35,9 +35,9 @@ const HomePrincipleMessage = () => {
         transition={textMotion.transition}
         viewport={{ once: false, amount: 0.3 }} 
         className="w-full lg:w-[50%] space-y-5 text-center lg:text-left shadow-lg shadow-gray-600 p-5 ">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black">Principle's Message</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-black">Principal's Message</h1>
 
-          <p className={`text-md sm:text-[13px] text-gray-600 font-medium overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[150px]' : 'max-h-[2000px]'
+          <p className={`w-full text-justify text-md sm:text-[13px] text-gray-600 font-medium overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[150px]' : 'max-h-[2000px]'
             }`}>
             I am pleased and enthusiastic to welcome you in Late.Adv. Ku. Shalaka Santosh Khandge Law for the 2025–26 academic
             year. As the principal of this esteemed college, I will endeavor to cultivate a community where both students and staff
@@ -70,13 +70,13 @@ const HomePrincipleMessage = () => {
         {/* Image Section - 40% */}
         <div className="w-full lg:w-[50%] flex flex-col items-center justify-center">
           <img
-            src={assets.sns}
+            src={assets.No_User}
             alt="About Us"
-            className="w-[70%] h-auto object-cover rounded-md shadow-lg"
+            className="w-[45%] h-auto object-cover rounded-md shadow-lg"
             loading="lazy"
           />
-          <h1 className='text-lg font-bold text-blue-700 mt-1'>Dr S.N.Sapali</h1>
-          <p className='font-light text-sm'>B.S.L., L.L.B., L.L.M., SET, PH.D - Principal</p>
+          <h1 className='text-lg font-bold text-blue-700 mt-1'>Principal</h1>
+          <p className='font-medium text-sm'>Principal</p>
         </div>
 
       </div>

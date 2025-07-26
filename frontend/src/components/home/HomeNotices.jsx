@@ -14,13 +14,8 @@ const HomeNotices = () => {
   const pdfNotices = [
     "Exam Timetable",
     "Holiday List",
-    "Admission Form",
-    "Annual Report",
-    "Seminar Notice",
     "Library Rules",
-    "Internal Assessment",
     "Fees Circular",
-    "Scholarship Notice",
   ];
 
   return (
@@ -50,7 +45,7 @@ const HomeNotices = () => {
         {/* Scrollable Notice Cards */}
         <div
           ref={scrollRef}
-          className="flex overflow-x-auto scroll-smooth w-full px-2 sm:px-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 py-4"
+          className="flex sm:justify-center overflow-x-auto scroll-smooth w-full px-2 sm:px-4 gap-4 sm:gap-6 md:gap-8 lg:gap-10 py-4"     // remove "justify center" for making cards scrollable from starting
         >
           {pdfNotices.map((title, index) => (
             <motion.div

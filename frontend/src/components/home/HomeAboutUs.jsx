@@ -72,26 +72,26 @@ const HomeAboutUs = () => {
             viewport={{ once: false, amount: 0.3 }}
             className="w-full lg:w-6/12 flex flex-col space-y-4 text-gray-800 shadow-md shadow-gray-800 p-3 rounded-xl"
           >
-            <p className="text-base sm:text-[16px] font-semibold text-gray-700">
+            <p className="w-full text-justify text-base sm:text-[16px] font-semibold text-gray-700">
               Foster an inclusive and collaborative academic environment to promote interdisciplinary
               engagement, critical thinking, and a commitment to lifelong learning.
             </p>
 
             <div
-              className={`text-sm sm:text-[13.5px] leading-relaxed text-gray-600 overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[160px]' : 'max-h-[2000px]'
+              className={`w-full text-justify text-sm sm:text-[13.5px] leading-relaxed text-gray-600 overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[160px]' : 'max-h-[2000px]'
                 }`}
             >
               <p className="text-sm sm:text-[12.5px] leading-relaxed text-gray-600">
-                Late Adv. Ku Shalaka Santosh Khandage Law College, Pune, was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandage Law College
+                Late Adv. Ku Shalaka Santosh Khandge Law College, Pune, was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandge Law College
                 (Affiliated to Savitribai Phule Pune University, Recognized by the Government of Maharashtra & Bar Council of India) upholds the Society’s philosophy
                 of Discipline, Dedication, and Determination. It is an upcoming institution to cater to the contemporary requirement of the society to have trained
                 Practicing and Corporate Lawyers.
               </p>
 
               <p className="text-sm sm:text-[12.5px] leading-relaxed text-gray-600">
-                In Maharashtra, the late Adv. Ku Shalaka Santosh Khandage Law College continues to be a prominent educational establishment that improves both schools and colleges.
+                In Maharashtra, the late Adv. Ku Shalaka Santosh Khandge Law College continues to be a prominent educational establishment that improves both schools and colleges.
                 The lawyers will receive the same training, which will prepare them for this innovative legal competition. In the short time since its founding, Late Adv. Ku. Shalaka
-                Santosh Khandage Law College has risen to prominence in the legal education field and endured by producing prosecutors, corporate lawyers, judicial officers, and legal
+                Santosh Khandge Law College has risen to prominence in the legal education field and endured by producing prosecutors, corporate lawyers, judicial officers, and legal
                 advisors who are highly regarded in the field.
               </p>
             </div>

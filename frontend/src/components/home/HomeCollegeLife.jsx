@@ -7,38 +7,27 @@ const HomeCollegeLife = () => {
       <div className="flex flex-col gap-4">
         {/* Heading */}
         <h2 className="text-4xl sm:text-6xl lg:text-7xl font-bold [word-spacing:8px] text-blue-900 text-center sm:text-left">
-           COLLEGE LIFE
+          COLLEGE LIFE
         </h2>
 
         {/* Image Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4">
-          {/* Column 1 */}
-          <div className="flex flex-col gap-4">
-            <img src={assets.CL11} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL10} alt="" className="w-full max-w-full h-auto rounded-md" />
-          </div>
-
-          {/* Column 2 */}
-          <div className="flex flex-col gap-4">
-            <img src={assets.CL9} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL8} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL7} alt="" className="w-full max-w-full h-auto rounded-md" />
-          </div>
-
-          {/* Column 3 */}
-          <div className="flex flex-col gap-4">
-            <img src={assets.CL6} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL5} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL4} alt="" className="w-full max-w-full h-auto rounded-md" />
-          </div>
-
-          {/* Column 4 */}
-          <div className="flex flex-col sm:flex-col lg:flex-col gap-4">
-            <img src={assets.CL3} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL2} alt="" className="w-full max-w-full h-auto rounded-md" />
-            <img src={assets.CL1} alt="" className="w-full max-w-full h-auto rounded-md" />
-          </div>
+        <div className="grid grid-cols-2 sm:grid-cols-3 xl:grid-cols-4 gap-3 px-4">
+          {[assets.Gallery1, assets.Gallery2, assets.Gallery3, assets.Gallery4, assets.Gallery5, assets.Gallery6, assets.Gallery7].map((src, idx) => (
+            <div
+              key={idx}
+              className={`w-full overflow-hidden rounded-lg shadow-md ${idx === 3 ? 'row-span-2 h-[360px] sm:h-[420px] md:h-[490px]' : 'h-44 sm:h-52 md:h-60'
+                }`}
+            >
+              <img
+                src={src}
+                alt={`Gallery ${idx + 1}`}
+                className="w-full h-full object-cover transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          ))}
         </div>
+
+
       </div>
     </div>
   )

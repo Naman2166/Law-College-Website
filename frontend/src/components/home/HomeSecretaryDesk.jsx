@@ -4,7 +4,7 @@ import { motion } from 'framer-motion'
 import useIsMobile from '../../hooks/useIsMobile'
 
 
-const HomeDirectorDesk = () => {
+const HomeSecretaryDesk = () => {
 
 
   const [isExpanded, setIsExpanded] = useState(false);       //for controlling text box length in mobile view
@@ -37,8 +37,8 @@ const HomeDirectorDesk = () => {
             className="w-[45%] h-auto object-cover rounded-md shadow-lg"
             loading="lazy"
           />
-          <h1 className='text-lg font-bold text-blue-700 mt-1'>Mr Santosh Khande</h1>
-          <p className='font-medium'>Director</p>
+          <h1 className='text-lg font-bold text-blue-700 mt-1'>Mr Santosh Khandge</h1>
+          <p className='font-medium'>Secretary</p>
         </div>
 
         {/* Text Section - 50% */}
@@ -48,9 +48,9 @@ const HomeDirectorDesk = () => {
           transition={textMotion.transition}
           viewport={{ once: false, amount: 0.3 }}
           className="w-full lg:w-[50%] space-y-5 text-center lg:text-left shadow-lg shadow-gray-600 p-5  ">
-          <h1 className="text-3xl sm:text-4xl font-bold text-black">Director Desk</h1>
+          <h1 className="text-3xl sm:text-4xl font-bold text-black">Secretary Desk</h1>
 
-          <p className={`text-md sm:text-[13px] text-gray-600 font-medium overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[150px]' : 'max-h-[2000px]'
+          <p className={`w-full text-justify text-md sm:text-[13px] text-gray-600 font-medium overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[150px]' : 'max-h-[2000px]'
             }`}>
 
             Nutan Maharashtra Vidya Prasarak Mandal is a prestigious educational organization in Maharashtra, recognized for establishing national
@@ -94,7 +94,7 @@ const HomeDirectorDesk = () => {
   )
 }
 
-export default HomeDirectorDesk
+export default HomeSecretaryDesk
 
 
 

@@ -14,13 +14,13 @@ const achievements = [
     icon: <FaTrophy className="absolute text-blue-900 opacity-10 text-[130px] z-0" />
   },
   {
-    value: "25+",
+    value: "15+",
     label: "Expert Faculties",
     icon: <FaChalkboardTeacher className="absolute text-blue-900 opacity-10 text-[130px] z-0" />
   },
   {
-    value: "30+",
-    label: "Recruiter Companies",
+    value: "10+",
+    label: "Legal Seminars & Workshops",
     icon: <FaBuilding className="absolute text-blue-900 opacity-10 text-[130px] z-0" />
   },
   {
@@ -37,7 +37,7 @@ const HomeAchievements = () => {
         <p className="text-4xl font-bold">Achievements</p>
 
         {/* card conatiner */}
-        <div className="w-full text-center grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="w-full text-center grid grid-cols-2 md:grid-cols-4 gap-4 ">
 
           {achievements.map((item, index) => (
             //--card---
