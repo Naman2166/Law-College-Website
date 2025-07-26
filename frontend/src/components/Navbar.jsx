@@ -118,15 +118,15 @@ const Navbar = () => {
 
 
       {/* bottom nav */}
-      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white py-0.5">               {/* previous color : bg-[#0b0360] */}
+      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
 
         {/* Left part */}
-        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[5.8rem] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
+        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[96.5px] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
           {/* Logo */}
           <div>
             <img
               src={assets.NavbarImage}
-              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[96px] w-auto cursor-pointer"
+              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[96.5px] w-auto cursor-pointer"
               alt="Logo"
               onClick={() => navigate("/")}
             />
