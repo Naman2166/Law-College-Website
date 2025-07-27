@@ -413,7 +413,7 @@ const StudentCorner = () => {
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/10 backdrop-brightness-85"></div>
 
-        <h1 className='absolute bottom-6 right-6 text-5xl md:text-7xl lg:text-8xl font-bold opacity-95'>Student Corner</h1>
+        <h1 className='absolute bottom-3 right-3 md:bottom-6 md:right-6 text-4xl md:text-7xl lg:text-8xl font-bold opacity-95'>Student Corner</h1>
 
       </div>
 
