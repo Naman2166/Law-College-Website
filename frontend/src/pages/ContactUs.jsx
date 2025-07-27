@@ -68,7 +68,7 @@ const ContactUs = () => {
 
           {/* Get in Touch */}
           <div className="w-full lg:w-1/2 space-y-6">
-            <h2 className="text-2xl font-bold text-blue-800 max-md:mt-7">Get in Touch</h2>
+            <h2 className="text-2xl font-bold text-blue-800 max-md:mt-0">Get in Touch</h2>
 
             {/* Visit us */}
             <div className="space-y-2">
@@ -122,7 +122,7 @@ const ContactUs = () => {
         {/* ✅ Important Contacts in Separate Row (Full Width) */}
         <div className=" pb-10 px-3">
           <h3 className="text-xl font-semibold text-black mb-4">Important Contacts</h3>
-          <div className="grid grid-cols-3 md:grid-cols-3 gap-5">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-5">
             {[
               { title: "Admission Cell Phone", phone: "7424080910" },
               { title: "Administrative Office", phone: "02114-228175" },
