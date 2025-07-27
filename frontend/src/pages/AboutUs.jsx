@@ -141,7 +141,7 @@ const AboutUs = () => {
               />
             </div>
 
-            <div className="w-full text-justify flex flex-col gap-8 text-base  mt-4 p-5">
+            <div className="w-full text-justify flex flex-col gap-8 text-base  mt-4 p-2">
               <p>
                 Late Adv. Ku Shalaka Santosh Khandge Law College , Pune was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandge Law College (Affiliated to Savitribai Phule Pune University,
                 Recognized by Govt. of Maharashtra & Bar Council of India), upholds the Society’s philosophy of Discipline, Dedication, and Determination. It is an upcoming institution to cater to the contemporary
@@ -487,10 +487,12 @@ const AboutUs = () => {
         {/* Banner */}
         <div
           className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
-          style={{ backgroundImage: `url(${assets.about})` }}
+          style={{ backgroundImage: `url(${assets.HomePageCoursesBgImage})` }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-85"></div>
+
+          <h1 className='absolute bottom-3 right-3 md:bottom-6 md:right-6 text-4xl md:text-7xl lg:text-8xl font-bold opacity-95'>About Us</h1>
 
         </div>
 

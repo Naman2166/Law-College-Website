@@ -7,6 +7,7 @@ import { FaFilePdf } from 'react-icons/fa';
 import AdmissionBanner from "../assets/images/AdmissionBanner.png";
 import Eligibility from "../assets/images/Eligibility.png";
 import { motion } from 'framer-motion';
+import { assets } from '../assets/assets';
 
 
 const admissionMenuItems = [
@@ -267,10 +268,12 @@ const Admission = () => {
         {/* Banner */}
         <div
           className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
-          style={{ backgroundImage: `url(${AdmissionBanner})` }}
+          style={{ backgroundImage: `url(${assets.HomePageCoursesBgImage})` }}
         >
           {/* Overlay */}
-          <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+          <div className="absolute inset-0 bg-black/10 backdrop-brightness-85"></div>
+
+          <h1 className='absolute bottom-6 right-6 text-5xl md:text-7xl lg:text-8xl font-bold opacity-95'>Admission</h1>
 
         </div>
 

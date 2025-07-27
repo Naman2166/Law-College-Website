@@ -3,6 +3,7 @@ import SidebarMenu from '../components/SidebarMenu';
 import { FaMapMarkerAlt, FaPhoneAlt, FaMailBulk, FaGlobe } from 'react-icons/fa';
 import ContactBanner from "../assets/images/ContactBanner.png";
 import ReCAPTCHA from "react-google-recaptcha";
+import { assets } from '../assets/assets';
 // Replace with actual banner image
 
 const contactMenuItems = [
@@ -32,7 +33,7 @@ const ContactUs = () => {
 
         {/* Contact Section */}
         {/* Contact Section Top Row: Send a Message + Get in Touch */}
-        <div className="flex flex-col lg:flex-row  px-3 md:px-8 py-10 gap-10">
+        <div className="flex flex-col lg:flex-row  px-3 md:px-8 py-10 gap-20">
           {/* Send a Message Form */}
           <div className="w-full lg:w-1/2 space-y-6">
             <h2 className="text-2xl font-bold text-blue-800">Send a Message</h2>
@@ -80,7 +81,7 @@ const ContactUs = () => {
             </div>
 
             {/* Contact for Admission Inquiries */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+            <div className="grid grid-cols-1 md:grid-cols-1 gap-10">
               <div className="space-y-1 text-sm text-gray-700">
                 <p className="font-semibold text-blue-800">Contact for Admission Inquiries</p>
                 <p className="flex items-center gap-2">
@@ -165,10 +166,11 @@ const ContactUs = () => {
       {/* Banner */}
       <div
         className="relative text-white bg-cover bg-center w-auto h-[8rem] sm:h-[14rem] md:h-[18rem] lg:h-[20rem] xl:h-[28rem]"
-        style={{ backgroundImage: `url(${ContactBanner})` }}
+        style={{ backgroundImage: `url(${assets.HomePageCoursesBgImage})` }}
       >
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/10 backdrop-brightness-75"></div>
+        <div className="absolute inset-0 bg-black/10 backdrop-brightness-85"></div>
+        <h1 className='absolute bottom-6 right-6 text-5xl md:text-7xl lg:text-8xl font-bold opacity-95'>Contact Us</h1>
 
       </div>
 
