@@ -22,7 +22,8 @@ const admissionMenuItems = [
 
 //Refund Policy PDF (case 3)
 const feeRefundPdf = [
-  {label:"Fee Refund Policy", pdf:""},
+  {label:"UGC Fee Refund Policy", pdf:"/UGC_Fee_Refund_Policy.pdf"},
+  {label:"ARA Fee Refund Policy", pdf:"/ARA_Fee_Refund_Policy.pdf"},
 ];
 
 //Refund Policy PDF (case 5)

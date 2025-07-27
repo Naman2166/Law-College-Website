@@ -169,7 +169,7 @@ const StudentCorner = () => {
                 <p className="text-sm sm:text-[15px] font-semibold text-gray-800 mb-1 w-full">
                   Hospital MOU
                 </p>
-                <p className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
+                <p onClick={()=>window.open('/MOU_Hospital.pdf','_blank')} className="text-blue-600 hover:text-blue-800 text-sm font-medium cursor-pointer">Download</p>
               </motion.div>
             </div>
           </div>

@@ -23,17 +23,17 @@ const Footer = () => {
           <p className="text-xl font-bold">Get In Touch With Us</p>
           <hr className="mb-4 border-gray-400" />
           <ul className="text-gray-300 space-y-4">
-            <li className="flex items-start gap-2">
-              {/* <FaBuilding className=" text-lg" /> */}
+            {/* <li className="flex items-start gap-2">
+              <FaBuilding className=" text-lg" />
               <span>
                  Late Adv. Ku Shalaka Santosh Khandge Law College, Pune
               </span>
-            </li>
+            </li> */}
             <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="mt-1 text-lg" />
               <span>
-                Talegaon Dabhade, Tal. Maval <br />
-                Dist-Pune, Maharashtra 410507
+              Late.Adv. Ku. Shalaka Santosh Khandge Law, Talegaon
+              Dabhade, Pune, Maharashtra 410507
               </span>
             </li>
             <li className="flex items-start gap-2">

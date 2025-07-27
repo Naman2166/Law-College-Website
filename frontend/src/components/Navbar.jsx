@@ -27,10 +27,10 @@ const Navbar = () => {
 
 
   const TopNavLinks = [
-    { label: 'Pune', icon: <FaMapMarkerAlt /> },
+    // { label: 'Pune', icon: <FaMapMarkerAlt /> },
     { label: '+91-7030082408', icon: <FaPhoneAlt /> },
     { label: 'adv.sskvm@gmail.com', icon: <FaEnvelope /> },
-    { to: 'https://www.ugc.ac.in/', label: 'UGC' },
+    // { to: 'https://www.ugc.ac.in/', label: 'UGC' },
     // { to: 'https://www.instagram.com', label: '', icon: <FaInstagram /> },
     // { to: "https://www.facebook.com", label: '', icon: <FaFacebookF /> },
   ];
