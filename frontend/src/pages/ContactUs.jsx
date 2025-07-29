@@ -4,27 +4,65 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaMailBulk, FaGlobe } from 'react-icons/fa'
 import ContactBanner from "../assets/images/ContactBanner.png";
 import ReCAPTCHA from "react-google-recaptcha";
 import { assets } from '../assets/assets';
+import axios from 'axios';
 // Replace with actual banner image
 
 const contactMenuItems = [
   { label: 'Contact Info' },
 ];
 
+
+
+
 const ContactUs = () => {
   const [activeIndex, setActiveIndex] = React.useState(0);
   const [captchaValue, setCaptchaValue] = useState(null);
+  
+  const [formData, setFormData] = useState({
+    name: '',
+    Email: '',
+    Subject: '',
+    Mobile: '',
+    Message: '',
+  });
 
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+   
+    if (!formData.name || !formData.Email || !formData.Subject || !formData.Mobile) {
+      alert('Please fill in all fields before submitting.');
+      return;
+    }
+    
+
     if (!captchaValue) {
       alert('Please verify you are not a robot!');
       return;
     }
 
-    // You can send `captchaValue` to your backend here for verification if needed
-    console.log('Form submitted!');
+
+  
+    try {
+      const res = await axios.post(`${import.meta.env.VITE_API_URL}/CreatecontactDetails`, formData);
+      console.log('Form submitted successfully:', res.data);
+      alert('Message sent successfully!');
+      // Optional: reset form
+      setFormData({
+        name: '',
+        Email: '',
+        Subject: '',
+        Mobile: '',
+        Message: '',
+      });
+      setCaptchaValue(null);
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Something went wrong!');
+    }
   };
+  
+
 
 
   const renderContent = () => {
@@ -39,12 +77,53 @@ const ContactUs = () => {
             <h2 className="text-2xl font-bold text-blue-800">Send a Message</h2>
             <form className="space-y-4" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
-                <input type="text" placeholder="Name" className="p-2 border-b w-full" />
-                <input type="email" placeholder="Email" className="p-2 border-b w-full" />
-                <input type="text" placeholder="Subject" className="p-2 border-b w-full " />
-                <input type="text" placeholder="Phone" className="p-2 border-b w-full" />
+                <input
+                  type="text"
+                  placeholder="Name"
+                  name="name"
+                  value={formData.name}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  className="p-2 border-b w-full"
+                />
+
+                <input
+                  type="email"
+                  placeholder="Email"
+                  name="Email"
+                  value={formData.Email}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  className="p-2 border-b w-full"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Subject"
+                  name="Subject"
+                  value={formData.Subject}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  className="p-2 border-b w-full"
+                />
+
+                <input
+                  type="text"
+                  placeholder="Phone"
+                  name="Mobile"
+                  value={formData.Mobile}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  className="p-2 border-b w-full"
+                />
+
               </div>
-              <textarea rows="1" placeholder="Message" className="w-full border-b p-2 mt-5"></textarea>
+
+                <textarea
+                  rows="1"
+                  placeholder="Message"
+                  name="Message"
+                  value={formData.Message}
+                  onChange={(e) => setFormData({ ...formData, [e.target.name]: e.target.value })}
+                  className="w-full border-b p-2 mt-5"
+                />
+             
 
               {/* ✅ reCAPTCHA instead of checkbox */}
               <div className="mt-4">
@@ -75,7 +154,7 @@ const ContactUs = () => {
               <p className="font-semibold text-blue-800">Visit us</p>
               <p className="flex items-start gap-2 text-sm text-gray-700">
                 <FaMapMarkerAlt className="text-blue-600 mt-1" />
-                Late.Adv. Ku. Shalaka Santosh Khandge Law, Talegaon Dabhade, <br/> 
+                Late.Adv. Ku. Shalaka Santosh Khandge Law, Talegaon Dabhade, <br />
                 Pune, Maharashtra 410507
               </p>
             </div>
@@ -170,7 +249,7 @@ const ContactUs = () => {
       >
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/10 backdrop-brightness-85"></div>
-        
+
         <h1 className='absolute bottom-3 right-3 md:bottom-6 md:right-6 text-4xl md:text-7xl lg:text-8xl font-bold opacity-95'>Contact Us</h1>
 
       </div>
