@@ -24,6 +24,7 @@ import Law3 from "./images/Law3.jpeg"
 import logo from "./images/logo.png"
 import NMVPM from "./images/NMVPM.jpg"
 import No_User from "./images/No_User.jpg"
+import principal from "./images/principal.jpg"
 
 
 
@@ -47,4 +48,5 @@ export const assets = {
   FooterBgBlack,
   logo, NMVPM,
   No_User,
+  principal,
 }

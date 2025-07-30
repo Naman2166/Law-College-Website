@@ -70,13 +70,13 @@ const HomePrincipleMessage = () => {
         {/* Image Section - 40% */}
         <div className="w-full lg:w-[50%] flex flex-col items-center justify-center">
           <img
-            src={assets.No_User}
+            src={assets.principal || assets.No_User}
             alt="About Us"
-            className="w-[45%] h-auto object-cover rounded-md shadow-lg"
+            className="w-[36%] h-auto object-cover rounded-md shadow-lg"
             loading="lazy"
           />
-          <h1 className='text-lg font-bold text-blue-700 mt-1'>Principal</h1>
-          <p className='font-medium text-sm'>Principal</p>
+          <h1 className='text-lg font-bold text-blue-700 mt-1'>Adv. Shailendra Dinkar Ghare</h1>
+          <p className='font-medium text-sm'>Incharge Principal</p>
         </div>
 
       </div>

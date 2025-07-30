@@ -314,11 +314,11 @@ const AboutUs = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Principal Message</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandge Law College</h3>
             <div className="flex justify-center mt-4">
-              <img src={assets.No_User} alt="Mr. Santosh Khandge" className="w-64 h-auto rounded shadow-md" loading="lazy" />
+              <img src={assets.principal || assets.No_User} alt="Mr. Santosh Khandge" className="w-64 h-auto rounded shadow-md" loading="lazy" />
             </div>
             <div className="text-center">
-              <p className="font-semibold text-lg text-blue-700">Principal</p>
-              <p className="text-lg font-bold">Principal</p>
+              <p className="font-semibold text-lg text-blue-700">Adv. Shailendra Dinkar Ghare</p>
+              <p className="text-lg font-bold">Incharge Principal</p>
             </div>
             <div className="max-w-5xl mx-auto text-justify leading-relaxed space-y-4 text-base">
               <p>
@@ -337,8 +337,8 @@ const AboutUs = () => {
                 I warmly invite aspiring law students to join our academic family and be part of a journey that transforms knowledge into action and ambition into achievement.
               </p>
               <p className="font-medium">
-                <span className="text-blue-700">Principal</span><br />
-                <span className="text-blue-500">Principal,<br />Late Adv. Ku. Shalaka Santosh Khandge Law College, Pune</span>
+                <span className="text-blue-700">Adv. Shailendra Dinkar Ghare (LL.B., LL.M.)</span><br />
+                <span className="text-blue-500">Incharge Principal,<br />Late Adv. Ku. Shalaka Santosh Khandge Law College, Pune</span>
               </p>
             </div>
           </div>
