@@ -82,14 +82,14 @@ const HomeAboutUs = () => {
                 }`}
             >
               <p className="text-sm sm:text-[12.5px] leading-relaxed text-gray-600">
-                Late Adv. Ku Shalaka Santosh Khandge Law College, Pune, was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandge Law College
+                Santosh Khandge Law College, Pune, was established in the year 2023. Late Adv. Ku Shalaka Santosh Khandge Law College
                 (Affiliated to Savitribai Phule Pune University, Recognized by the Government of Maharashtra & Bar Council of India) upholds the Society’s philosophy
                 of Discipline, Dedication, and Determination. It is an upcoming institution to cater to the contemporary requirement of the society to have trained
                 Practicing and Corporate Lawyers.
               </p>
 
               <p className="text-sm sm:text-[12.5px] leading-relaxed text-gray-600">
-                In Maharashtra, the late Adv. Ku Shalaka Santosh Khandge Law College continues to be a prominent educational establishment that improves both schools and colleges.
+                In Maharashtra, Santosh Khandge Law College continues to be a prominent educational establishment that improves both schools and colleges.
                 The lawyers will receive the same training, which will prepare them for this innovative legal competition. In the short time since its founding, Late Adv. Ku. Shalaka
                 Santosh Khandge Law College has risen to prominence in the legal education field and endured by producing prosecutors, corporate lawyers, judicial officers, and legal
                 advisors who are highly regarded in the field.

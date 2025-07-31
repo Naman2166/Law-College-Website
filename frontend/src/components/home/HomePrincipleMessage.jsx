@@ -39,7 +39,7 @@ const HomePrincipleMessage = () => {
 
           <p className={`w-full text-justify text-md sm:text-[13px] text-gray-600 font-medium overflow-hidden transition-all duration-500 ${isMobile && !isExpanded ? 'max-h-[150px]' : 'max-h-[2000px]'
             }`}>
-            I am pleased and enthusiastic to welcome you in Late.Adv. Ku. Shalaka Santosh Khandge Law for the 2025–26 academic
+            I am pleased and enthusiastic to welcome you in Santosh Khandge Law college for the 2025–26 academic
             year. As the principal of this esteemed college, I will endeavor to cultivate a community where both students and staff
             can flourish in an environment that prioritizes integrity, equity, and ethical thinking. Alongside obtaining the requisite technical skills and knowledge for legal practice, our college fosters in its students a deep commitment to social justice and an aspiration to effectuate constructive change in the world. Guiding our students to achieve their utmost potential is the primary vocation of our educators, who are all experienced scholars and professionals.  I trust you will embark on your academic endeavor with a positive and resolute mindset, prepared to confront any challenges that arise. Remember that mastering the intricacies of the law constitutes only half the challenge; the other half involves understanding the extensive implications the law has on individuals and communities.  We must consistently pursue the highest standards of academic rigor, ethical conduct, and professional excellence.
           </p>
