@@ -25,6 +25,8 @@ import logo from "./images/logo.png"
 import NMVPM from "./images/NMVPM.jpg"
 import No_User from "./images/No_User.jpg"
 import principal from "./images/principal.jpg"
+import secretary from "./images/secretary.jpg"
+import NavLogo_right from "./images/NavLogo_right.png"
 
 
 
@@ -49,4 +51,6 @@ export const assets = {
   logo, NMVPM,
   No_User,
   principal,
+  secretary,
+  NavLogo_right,
 }

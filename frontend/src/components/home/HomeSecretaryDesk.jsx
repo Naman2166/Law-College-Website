@@ -32,9 +32,9 @@ const HomeSecretaryDesk = () => {
         {/* Image Section - 50% */}
         <div className=" w-full lg:w-[50%] flex flex-col items-center justify-center">
           <img
-            src={assets.ssk}
+            src={assets.secretary}
             alt="About Us"
-            className="w-[45%] h-auto object-cover rounded-md shadow-lg"
+            className="w-[40%] h-auto object-cover rounded-md shadow-lg"
             loading="lazy"
           />
           <h1 className='text-lg font-bold text-blue-700 mt-1'>Mr Santosh Khandge</h1>

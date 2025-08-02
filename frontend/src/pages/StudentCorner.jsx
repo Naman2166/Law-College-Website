@@ -102,7 +102,7 @@ const StudentCorner = () => {
         const element = document.getElementById(id);
         if (element) {
           // Adjust offset to scroll below the banner
-          const yOffset = -150; // adjust based on your banner height
+          const yOffset = -220; // adjust based on your banner height
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }

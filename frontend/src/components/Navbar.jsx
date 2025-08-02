@@ -63,12 +63,17 @@ const Navbar = () => {
     ],
   };
 
-
+  //logo word spacing (responsive)
+  const wordSpacingStyle = window.innerWidth < 640
+  ? '0px'
+  : window.innerWidth < 768
+  ? '1px'
+  : '1px';
 
 
 
   return (
-    <div className=" w-full fixed top-0 left-0 z-50 shadow-md shadow-gray-500 bg-white">
+    <div className=" w-full fixed top-0 left-0 z-50 shadow-sm shadow-gray-500 bg-white">
 
       {/* Moving Top Nav */}
       {/* <div className="hidden lg:flex justify-end items-center gap-16 py-0.5 bg-[#05052e] overflow-hidden">
@@ -87,10 +92,10 @@ const Navbar = () => {
       </div> */}
 
 
-      {/* Top Nav */}
+      {/* Top Navbar */}
       <div className="hidden lg:flex justify-end items-center gap-16 py-0.5 bg-[#05052e] ">   {/* original : bg-[#0b0360]*/}
-        <ul 
-        className="text-white text-[13px] flex flex-wrap gap-8 xl:gap-8 px-16">
+        <ul
+          className="text-white text-[13px] flex flex-wrap gap-8 xl:gap-8 px-16">
           {TopNavLinks.map(({ to = '#', label, icon }, index) => (
             <div className="flex items-center" key={label + index}>
               <NavLink
@@ -117,20 +122,49 @@ const Navbar = () => {
 
 
 
-      {/* bottom nav */}
-      <div className="lg:flex lg:flex-row justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
+      {/* old :- bottom nav,  new :- middle + bottom nav */}
+      <div className="lg:flex lg:flex-col justify-between  text-sm bg-white">               {/* previous color : bg-[#0b0360] */}
 
-        {/* Left part */}
-        <div className="flex justify-between lg:justify-between items-center h-[63px] sm:h-20 md:h-[97px] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
+        {/* old :- Left part , new :- middle nav*/}
+        <div className="flex justify-between lg:justify-center items-center h-[58px] sm:h-[75px] md:h-[85px] lg:h-[110px] xl:h-[110px] px-2 sm:px-1.5 lg:px-2 pt-1 sm:pt-0 pb-0 bg-white">
           {/* Logo */}
-          <div>
+
+
+          {/*desktop view middle nav*/}
+          <div className='flex justify-center gap-x-1 sm:gap-x-1.5 md:gap-x-2.5 lg:gap-x-5 md:p-1'>
+            
             <img
-              src={assets.NavbarImage}
-              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[97px] w-auto cursor-pointer"
+              src={assets.logo}
+              className="h-[44px] sm:h-[64px] md:h-[70px] lg:h-[105px] w-auto cursor-pointer"
+              alt="Logo"
+              onClick={() => navigate("/")}
+            />
+
+            <div className='flex flex-col items-center justify-center gap-y-0.5 sm:gap-1 '>
+              <p className='text-green-900 text-[5.5px] sm:text-[7px] md:text-[8px] lg:text-[13px] font-semibold' style={{ wordSpacing: wordSpacingStyle }}>Nutan Maharashtra Vidya Prasarak Mandal's</p>
+              <p className='text-blue-700 text-[7.5px] sm:text-[9px] md:text-[10px] lg:text-[19px] font-bold' style={{ wordSpacing: wordSpacingStyle }}>Late. Adv. Ku. Shalaka Santosh Khandge Law</p>
+              <p className='text-black text-[5.5px] sm:text-[7px] md:text-[8px] lg:text-[13px] font-semibold text-center leading-tight' style={{ wordSpacing: '0.5px' }}>Affliate to Savitribai Phule Pune University, Recognized by <br/> Govt. of Maharashtra & Bar Council of India</p>
+            </div>
+
+            <img
+              src={assets.NavLogo_right}
+              className="h-[46px] sm:h-[64px] md:h-[70px] lg:h-[105px] w-auto cursor-pointer"
               alt="Logo"
               onClick={() => navigate("/")}
             />
           </div>
+
+
+
+          {/*Mobile view middle nav */}
+          {/* <div className='hidden'>
+            <img
+              src={assets.NavbarImage}
+              className="h-[50px] sm:h-[64px] md:h-[70px] lg:h-[110px] w-auto lg:w-[485px] cursor-pointer"
+              alt="Logo"
+              onClick={() => navigate("/")}
+            />
+          </div> */}
 
 
           {/* Hamburger Icon */}
@@ -143,10 +177,10 @@ const Navbar = () => {
         </div>
 
 
-        {/* Desktop Nav / Right part */}
+        {/* NavLinks => old :- Right part , new :- bottom nav */}
 
-        <div className="relative hidden lg:flex justify-end items-center gap-16 py-3 px-5 bg-white">
-          <ul className="text-gray-800 text-[14px] flex flex-wrap gap-8 xl:gap-7 font-semibold">
+        <div className="relative hidden lg:flex justify-center items-center gap-16  py-3 px-5 bg-[#05052e]">
+          <ul className="text-gray-100 text-[14px] flex flex-wrap gap-8 xl:gap-12 font-semibold">
             {bottomNavLinks.map(({ to, label, arrow }, index) => (
               <div
                 key={to}
@@ -178,9 +212,9 @@ const Navbar = () => {
                     <li className="py-3 whitespace-nowrap">{label}</li>
                     {arrow &&
                       (hoveredIndex === index ? (
-                        <FaChevronUp className="text-gray-500" />
+                        <FaChevronUp className="text-gray-100" />
                       ) : (
-                        <FaChevronDown className="text-gray-500" />
+                        <FaChevronDown className="text-gray-100" />
                       ))}
                   </div>
                 </NavLink>
@@ -188,36 +222,36 @@ const Navbar = () => {
 
                 {/* Submenu Dropdown */}
                 <AnimatePresence>
-                {arrow &&
-                  isMenuOpen &&
-                  hoveredIndex === index &&
-                  subMenus[label] && (
-                    <motion.div
-                      initial={{ y: '10%', opacity:0 }}
-                      animate={{ y: 0, opacity:1, transition:{ duration: 0.5 } }}
-                      exit={{ y: '4%', opacity:0, transition:{duration:0.3} }}
-                      className="absolute top-full -mt-2 pt-3 w-60 bg-transparent">
-                      <div className='bg-white rounded-b-lg shadow-lg z-50 py-0 border-t-[5px] border-t-[#0d0d5a]'>      {/* original : border-t-blue-800 */}
-                        {subMenus[label].map((item, idx) => (
-                          <motion.div
-                            key={idx}
-                            onClick={() => {
-                              setActiveIndex(idx);
-                              setIsMenuOpen(false);
-                              navigate(item.to);
-                            }}
-                            className={` flex flex-col cursor-pointer text-[13px] font-normal text-gray-900 hover:bg-gray-200 hover:text-gray-800 hover:font-semibold  transition ${activeIndex === idx
-                              ? ""
-                              : ""
-                              }`}
-                          >
-                            <p className='border-b border-b-gray-500 py-4 px-2 mx-3'> {item.label} </p>
-                          </motion.div>
-                        ))}
-                      </div>
-                    </motion.div>
-                  )}
-                  </AnimatePresence>
+                  {arrow &&
+                    isMenuOpen &&
+                    hoveredIndex === index &&
+                    subMenus[label] && (
+                      <motion.div
+                        initial={{ y: '10%', opacity: 0 }}
+                        animate={{ y: 0, opacity: 1, transition: { duration: 0.5 } }}
+                        exit={{ y: '4%', opacity: 0, transition: { duration: 0.3 } }}
+                        className="absolute top-full -mt-2 pt-3 w-60 bg-transparent">
+                        <div className='bg-white rounded-b-lg shadow-lg z-50 py-0 border-t-[5px] border-t-[#1245A8]'>      {/* original : border-t-[#0d0d5a] */}
+                          {subMenus[label].map((item, idx) => (
+                            <motion.div
+                              key={idx}
+                              onClick={() => {
+                                setActiveIndex(idx);
+                                setIsMenuOpen(false);
+                                navigate(item.to);
+                              }}
+                              className={` flex flex-col cursor-pointer text-[13px] font-normal text-gray-900 hover:bg-gray-200 hover:text-gray-800 hover:font-semibold  transition ${activeIndex === idx
+                                ? ""
+                                : ""
+                                }`}
+                            >
+                              <p className='border-b border-b-gray-500 py-4 px-2 mx-3'> {item.label} </p>
+                            </motion.div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                </AnimatePresence>
 
               </div>
             ))}
@@ -323,7 +357,7 @@ const Navbar = () => {
 
       </div>
 
-    
+
     </div>
   );
 };

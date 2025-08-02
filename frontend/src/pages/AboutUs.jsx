@@ -101,7 +101,7 @@ const AboutUs = () => {
         const id = hash.replace('#', '');
         const element = document.getElementById(id);
         if (element) {
-          const yOffset = -150; // adjust for your sticky header height
+          const yOffset = -220; // adjust for your sticky header height
           const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
           window.scrollTo({ top: y, behavior: 'smooth' });
         }
@@ -275,7 +275,7 @@ const AboutUs = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-blue-800 text-start">Secretary Desk</h2>
             <h3 className="text-xl md:text-2xl font-semibold text-start">Welcome To Late Adv. Ku Shalaka Santosh Khandge Law College</h3>
             <div className="flex justify-center mt-4">
-              <img src={ssk} alt="Mr. Santosh Khandge" className="w-64 h-auto rounded shadow-md" loading="lazy" />
+              <img src={assets.secretary} alt="Mr. Santosh Khandge" className="w-64 h-auto rounded shadow-md" loading="lazy" />
             </div>
             <div className="text-center">
               <p className="font-semibold text-lg text-blue-700">Mr. Santosh Khandge</p>
