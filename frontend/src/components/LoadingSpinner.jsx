@@ -14,7 +14,7 @@ const LoadingSpinner = () => {
 
       {/* College Name */}
       <h1 className="text-xl font-bold text-blue-900 mb-2 text-center">
-        Late Adv. Ku Shalaka Santosh Khandage Law College
+      Late. Adv. Ku. Shalaka Santosh Khandge Law College
       </h1>
 
       {/* Spinner */}

@@ -184,8 +184,8 @@ const StudentCorner = () => {
             <div className='flex flex-col gap-y-3 '>
               <h3 className="text-xl font-bold text-blue-800 mt-3">Hostel Facilities</h3>
               <p className="text-base leading-relaxed text-justify">
-                Santosh Khandge Law College has a highly furnished in campus hostel facility for the boys and girls coming outside. Each hostel will be carefully and strictly managed by their wardens.
-                Well maintained college canteen is very close to hostels. The food quality is verified by Food committee for Santosh Khandge Law College time to time so that students will get good quality food.
+              Late. Adv. Ku. Shalaka Santosh Khandge Law College has a highly furnished in campus hostel facility for the boys and girls coming outside. Each hostel will be carefully and strictly managed by their wardens.
+                Well maintained college canteen is very close to hostels. The food quality is verified by Food committee for Late. Adv. Ku. Shalaka Santosh Khandge Law College time to time so that students will get good quality food.
                 Accommodation available for 196 students.
               </p>
             </div>
@@ -300,7 +300,7 @@ const StudentCorner = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-bold text-blue-800">Santosh Khandge College, Talegaon BUS Route & Fees :</h3>
+              <h3 className="text-xl font-bold text-blue-800">Late. Adv. Ku. Shalaka Santosh Khandge Law College, Talegaon BUS Route & Fees :</h3>
 
               <div className='grid grid-cols-1 md:grid-cols-2 gap-5 mt-2'>
                 {/* Route 1 */}

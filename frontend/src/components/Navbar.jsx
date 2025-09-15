@@ -142,7 +142,7 @@ const Navbar = () => {
 
             <div className='flex flex-col items-center justify-center gap-y-0.5 sm:gap-1 '>
               <p className='text-green-900 text-[5.5px] sm:text-[7px] md:text-[8px] lg:text-[13px] font-semibold' style={{ wordSpacing: wordSpacingStyle }}>Nutan Maharashtra Vidya Prasarak Mandal's</p>
-              <p className='text-blue-700 text-[7.5px] sm:text-[9px] md:text-[10px] lg:text-[19px] font-bold' style={{ wordSpacing: wordSpacingStyle }}>Late. Adv. Ku. Shalaka Santosh Khandge Law</p>
+              <p className='text-blue-700 text-[7.5px] sm:text-[9px] md:text-[10px] lg:text-[19px] font-bold' style={{ wordSpacing: wordSpacingStyle }}>Late. Adv. Ku. Shalaka Santosh Khandge Law College</p>
               <p className='text-black text-[5.5px] sm:text-[7px] md:text-[8px] lg:text-[13px] font-semibold text-center leading-tight' style={{ wordSpacing: '0.5px' }}>Affliate to Savitribai Phule Pune University, Recognized by <br/> Govt. of Maharashtra & Bar Council of India</p>
             </div>
 
