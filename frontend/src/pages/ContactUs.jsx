@@ -154,7 +154,7 @@ const ContactUs = () => {
               <p className="font-semibold text-blue-800">Visit us</p>
               <p className="flex items-start gap-2 text-sm text-gray-700">
                 <FaMapMarkerAlt className="text-blue-600 mt-1" />
-                Late.Adv. Ku. Shalaka Santosh Khandge Law, Talegaon Dabhade, <br />
+                Late.Adv. Ku. Shalaka Santosh Khandge Law College, Talegaon Dabhade, <br />
                 Pune, Maharashtra 410507
               </p>
             </div>

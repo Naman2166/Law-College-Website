@@ -32,7 +32,7 @@ const Footer = () => {
             <li className="flex items-start gap-2">
               <FaMapMarkerAlt className="mt-1 text-lg" />
               <span>
-              Late.Adv. Ku. Shalaka Santosh Khandge Law, Talegaon
+              Late Adv. Ku. Shalaka Santosh Khandge Law College, Talegaon
               Dabhade, Pune, Maharashtra 410507
               </span>
             </li>
