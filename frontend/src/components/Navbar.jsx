@@ -179,7 +179,7 @@ const Navbar = () => {
 
         {/* NavLinks => old :- Right part , new :- bottom nav */}
 
-        <div className="relative hidden lg:flex justify-center items-center gap-16  py-3 px-5 bg-[#05052e]">
+        <div className="relative hidden lg:flex justify-center items-center gap-16  py-2 px-5 bg-[#05052e]">
           <ul className="text-gray-100 text-[14px] flex flex-wrap gap-8 xl:gap-12 font-semibold">
             {bottomNavLinks.map(({ to, label, arrow }, index) => (
               <div

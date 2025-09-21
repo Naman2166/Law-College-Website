@@ -7,10 +7,12 @@ import HomePrincipleMessage from '../components/home/HomePrincipleMessage'
 import HomeNotices from '../components/home/HomeNotices'
 import HomeAchievements from '../components/home/HomeAchievements'
 import HomeCollegeLife from '../components/home/HomeCollegeLife'
+import SpotlightTicker from '../components/home/SpotlightTicker'
 
 const Home = () => {
   return (
     <div>
+        <SpotlightTicker />
         <HomeHeader />
         <HomeAboutUs />
         <HomeCourses />
