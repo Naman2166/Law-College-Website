@@ -41,7 +41,7 @@ const HomeHeader = () => {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: 'easeOut' }}
-          className="text-white text-center flex flex-col justify-center items-center gap-8 sm:gap-14"
+          className="text-white text-center flex flex-col justify-center items-center gap-8 sm:gap-14 md:-mt-15"     //left content shifted little bit up (ie md:-mt-15)
         >
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -86,16 +86,3 @@ const HomeHeader = () => {
 export default HomeHeader
 
 
-
-
-
-
-
- {/*  Right Image */}
-        {/* <div className="flex justify-center items-center">
-          <img
-            src={assets.HomeHeaderImage}
-            alt="Header Illustration"
-            className="xl:mt-8 lg:mt-5 h-[240px] w-[310px] xs:h-60 xs:w-60 sm:h-96 sm:w-80 md:w-auto md:h-[400px] lg:h-[420px] xl:h-[440px]"
-          />
-        </div> */}
